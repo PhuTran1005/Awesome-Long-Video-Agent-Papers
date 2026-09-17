@@ -15,11 +15,17 @@ body:
       description: An arXiv, DOI, publisher, or proceedings URL.
     validations:
       required: true
+  - type: input
+    id: released
+    attributes:
+      label: First public release date
+      description: Use YYYY-MM-DD, YYYY-MM, or YYYY, based on the primary source.
   - type: dropdown
     id: stage
     attributes:
-      label: Main taxonomy stage
+      label: Suggested taxonomy stage
       options:
+        - To be determined (Recent Additions)
         - Evidence Acquisition
         - Memory & State Representation
         - Control & Planning
@@ -29,7 +35,7 @@ body:
   - type: textarea
     id: relevance
     attributes:
-      label: Relevance and proposed mechanism
+      label: Main contribution and proposed mechanism
       description: Explain the feedback loop or the paper's role as an agent-enabling baseline. Mention additional branches if relevant.
     validations:
       required: true

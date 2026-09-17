@@ -34,6 +34,12 @@ The taxonomy includes agentic systems alongside selected agent-enabling baseline
 
 This is a curated snapshot of the survey taxonomy, not a claim of exhaustive coverage or a performance ranking. The survey is in preparation; no public manuscript URL, author list, acceptance claim, or formal survey citation is supplied here.
 
+## Recent Additions
+
+[Recent Additions](../papers/recent-additions.md) is a manually maintained list for methods awaiting integration into the manuscript taxonomy. Suggested stages are provisional. These entries do not affect the imported catalog, exported bibliography, or taxonomy counts.
+
+Catalog rebuilds and manuscript imports preserve this page. Once a method is integrated into the taxonomy, its pending row is removed to avoid duplicate listings.
+
 ## Maintenance
 
 See [CONTRIBUTING.md](../CONTRIBUTING.md) for import, rebuild, and validation commands. Automated checks cover citation-key coverage, duplicate assignments, category validity, deterministic page generation, and local file and anchor links. They do not guarantee continued availability of external websites.

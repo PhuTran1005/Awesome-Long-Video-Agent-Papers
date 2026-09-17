@@ -6,7 +6,21 @@ Thank you for helping maintain this collection. Contributions should be accurate
 
 Open a [paper suggestion](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers/issues/new?template=paper.yml) with the title, authors, publication link, BibTeX, and proposed taxonomy branch. Explain which earlier observation affects a later evidence-access decision. For an agent-enabling baseline or foundational method, explain that role explicitly.
 
-Check the [full index](papers/index.md) first. A preprint and its conference version normally belong to one paper entry. Methods may belong to multiple branches when the taxonomy supports those assignments.
+Check the [taxonomy index](papers/index.md) and [recent additions](papers/recent-additions.md) first. A preprint and its conference version normally belong to one paper entry. Methods may belong to multiple branches when the taxonomy supports those assignments.
+
+## Add a Recent Method
+
+Methods that are not yet part of the manuscript taxonomy belong in [Recent Additions](papers/recent-additions.md). A finalized taxonomy assignment is not required.
+
+Edit that page directly and add a row to the **Latest Methods** table with the release date, method name and full title, a concise contribution, a suggested stage (or **To be determined**), and primary publication links. Use the date conventions on that page and order entries newest first. Remove the empty-state sentence when adding the first method. Include BibTeX in the issue or pull request.
+
+This manually maintained page survives catalog rebuilds and manuscript imports. Add pending methods here without changing the taxonomy catalog or its bibliography. Once a method is integrated into the manuscript, update the generated catalog and remove its pending row.
+
+Run the existing consistency check before submitting:
+
+```bash
+python3 scripts/catalog.py --check
+```
 
 ## Update the Catalog
 
@@ -29,7 +43,7 @@ The repository requires **Python 3.10 or newer**, with no third-party dependenci
 
 6. Open a pull request explaining the change and its source.
 
-The five files in `papers/` are generated. Update their source data rather than editing those pages directly. Use English throughout the repository.
+The four taxonomy pages and `papers/index.md` are generated; `papers/recent-additions.md` is maintained manually. Update their source data rather than editing those pages directly. Use English throughout the repository.
 
 ## Synchronize with the Manuscript
 

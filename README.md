@@ -12,7 +12,7 @@
 [![Contributions](https://img.shields.io/badge/Contributions-Welcome-16a34a?style=flat-square)](CONTRIBUTING.md)
 [![License](https://img.shields.io/badge/License-Apache_2.0-2563eb?style=flat-square)](LICENSE)
 
-**[Explore the taxonomy](#taxonomy)** · **[Browse all papers](papers/index.md)** · **[Get BibTeX](references.bib)** · **[Suggest a paper](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers/issues/new?template=paper.yml)**
+**[Recent additions](#recent-additions)** · **[Explore the taxonomy](#taxonomy)** · **[Browse all papers](papers/index.md)** · **[Get BibTeX](references.bib)** · **[Suggest a paper](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers/issues/new?template=paper.yml)**
 
 </div>
 
@@ -28,6 +28,14 @@ Long videos make exhaustive, high-resolution processing expensive. Video agents 
   <a href="assets/survey-teaser.png"><img src="assets/survey-teaser.png" alt="Survey teaser comparing conventional video processing, LLM-based video understanding, and an agentic loop with planning, observation, memory, verification, and multimodal evidence" width="960"></a>
   <br><sub>From passive processing to adaptive evidence seeking. Click the figure to view it at full resolution.</sub>
 </p>
+
+## Recent Additions
+
+A growing reading list of **new methods that have not yet been incorporated into the survey taxonomy**. This section provides a home for future papers as the field evolves.
+
+**[Browse recent additions →](papers/recent-additions.md)** · **[Suggest a new method](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers/issues/new?template=paper.yml)**
+
+Entries are listed by release date, newest first. Suggested categories are provisional; papers join the taxonomy catalog after review and integration into the manuscript. The taxonomy counts below cover the classified collection.
 
 ## Taxonomy
 
@@ -108,7 +116,8 @@ The collection maps the manuscript's `sections/taxonomy.tex` to `custom.bib` usi
 
 | Resource | What you will find |
 | :--- | :--- |
-| [All papers](papers/index.md) | A deduplicated index, organized by year, with links back to each taxonomy branch |
+| [Recent additions](papers/recent-additions.md) | New methods awaiting taxonomy integration, with provisional categories |
+| [Taxonomy paper index](papers/index.md) | A deduplicated index, organized by year, with links back to each taxonomy branch |
 | [BibTeX bibliography](references.bib) | All taxonomy citation records, with their original keys |
 | [Structured catalog](data/catalog.json) | Titles, authors, venues, citation aliases, and all category assignments |
 | [Data notes](docs/DATA_NOTES.md) | Provenance, duplicate handling, link sources, and metadata conventions |
