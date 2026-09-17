@@ -1,0 +1,1648 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "taxonomy": "sections/taxonomy.tex",
+    "bibliography": "custom.bib",
+    "taxonomy_sha256": "eaff7c64da37cbeda836644c83d12e4d60f76c90674e028725085879dd543720",
+    "bibliography_sha256": "9ee18b5d5509863f99f108e5b9d5ad757b593a8cbd32399ccb4117b9bc1bbbae"
+  },
+  "papers": [
+    {
+      "id": "wang2024videoagent",
+      "name": "VideoAgent",
+      "title": "Videoagent: Long-form video understanding with large language model as agent",
+      "authors": "Wang, Xiaohan and Zhang, Yuhui and Zohar, Orr and Yeung-Levy, Serena",
+      "year": 2024,
+      "venue": "European Conference on Computer Vision",
+      "url": "https://scholar.google.com/scholar?q=%22Videoagent%3A%20Long-form%20video%20understanding%20with%20large%20language%20model%20as%20agent%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "wang2024videoagent"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based",
+        "control-planning/fixed-workflow"
+      ]
+    },
+    {
+      "id": "yuan2025videodeepresearch",
+      "name": "VideoDeepResearch",
+      "title": "Videodeepresearch: Long video understanding with agentic tool using",
+      "authors": "Yuan, Huaying and Liu, Zheng and Zhou, Junjie and Wen, Ji-Rong and Dou, Zhicheng",
+      "year": 2025,
+      "venue": "arXiv e-prints",
+      "url": "https://scholar.google.com/scholar?q=%22Videodeepresearch%3A%20Long%20video%20understanding%20with%20agentic%20tool%20using%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "yuan2025videodeepresearch"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based"
+      ]
+    },
+    {
+      "id": "chu2025understanding",
+      "name": "GraphVideoAgent",
+      "title": "Understanding long videos via llm-powered entity relation graphs",
+      "authors": "Chu, Meng and Li, Yicong and Chua, Tat-Seng",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2501.15953",
+      "url": "https://arxiv.org/abs/2501.15953",
+      "link_label": "Paper",
+      "citation_keys": [
+        "chu2025understanding"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based",
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "ma2025drvideo",
+      "name": "DrVideo",
+      "title": "Drvideo: Document retrieval based long video understanding",
+      "authors": "Ma, Ziyu and Gou, Chenhui and Shi, Hengcan and Sun, Bin and Li, Shutao and Rezatofighi, Hamid and Cai, Jianfei",
+      "year": 2025,
+      "venue": "Proceedings of the Computer Vision and Pattern Recognition Conference",
+      "url": "https://scholar.google.com/scholar?q=%22Drvideo%3A%20Document%20retrieval%20based%20long%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "ma2025drvideo"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based",
+        "memory-state/caption-text"
+      ]
+    },
+    {
+      "id": "gao2025agentic",
+      "name": "AVI",
+      "title": "Agentic Video Intelligence: A Flexible Framework for Advanced Video Exploration and Understanding",
+      "authors": "Gao, Hong and Bao, Yiming and Tu, Xuezhen and Xu, Yutong and Jin, Yue and Mu, Yiyang and Zhong, Bin and Yue, Linan and Zhang, Min-Ling",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2511.14446",
+      "url": "https://arxiv.org/abs/2511.14446",
+      "link_label": "Paper",
+      "citation_keys": [
+        "gao2025agentic"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based"
+      ]
+    },
+    {
+      "id": "ren2026videorag",
+      "name": "VideoRAG",
+      "title": "Videorag: Retrieval-augmented generation with extreme long-context videos",
+      "authors": "Ren, Xubin and Xu, Lingrui and Xia, Long and Wang, Shuaiqiang and Yin, Dawei and Huang, Chao",
+      "year": 2026,
+      "venue": "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining V. 1",
+      "url": "https://scholar.google.com/scholar?q=%22Videorag%3A%20Retrieval-augmented%20generation%20with%20extreme%20long-context%20videos%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "ren2026videorag"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based",
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "dvd",
+      "name": "DVD",
+      "title": "Deep video discovery: Agentic search with tool use for long-form video understanding",
+      "authors": "Zhang, Xiaoyi and Jia, Zhaoyang and Guo, Zongyu and Li, Jiahao and Li, Bin and Li, Houqiang and Lu, Yan",
+      "year": 2026,
+      "venue": "Advances in Neural Information Processing Systems",
+      "url": "https://scholar.google.com/scholar?q=%22Deep%20video%20discovery%3A%20Agentic%20search%20with%20tool%20use%20for%20long-form%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "dvd"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based"
+      ]
+    },
+    {
+      "id": "lin2026videoseek",
+      "name": "VideoSeek",
+      "title": "VideoSeek: Long-Horizon Video Agent with Tool-Guided Seeking",
+      "authors": "Lin, Jingyang and Wu, Jialian and Liu, Jiang and Sun, Ximeng and Wang, Ze and Yu, Xiaodong and Luo, Jiebo and Liu, Zicheng and Barsoum, Emad",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22VideoSeek%3A%20Long-Horizon%20Video%20Agent%20with%20Tool-Guided%20Seeking%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "lin2026videoseek"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based"
+      ]
+    },
+    {
+      "id": "goel2026incentivizing",
+      "name": "VSeek",
+      "title": "Incentivizing Vision Language Models to Search for Long Video Question Answering",
+      "authors": "Goel, Harsh and Sharan, SP and Shah, Sahil and Choi, Minkyu and An, Joungbin and Grauman, Kristen and Chinchali, Sandeep P",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2607.02959",
+      "url": "https://arxiv.org/abs/2607.02959",
+      "link_label": "Paper",
+      "citation_keys": [
+        "goel2026incentivizing"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based",
+        "evidence-acquisition/learned-policy"
+      ]
+    },
+    {
+      "id": "zhu2026omniragagentagenticomnimodalreasoning",
+      "name": "OmniRAG-Agent",
+      "title": "OmniRAG-Agent: Agentic Omnimodal Reasoning for Low-Resource Long Audio-Video Question Answering",
+      "authors": "Yifan Zhu and Xinyu Mu and Tao Feng and Zhonghong Ou and Yuning Gong and Haoran Luo",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2602.03707",
+      "link_label": "Paper",
+      "citation_keys": [
+        "zhu2026omniragagentagenticomnimodalreasoning"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based",
+        "evidence-acquisition/learned-policy"
+      ]
+    },
+    {
+      "id": "wen2026eventmemagenthierarchicaleventcentricmemory",
+      "name": "EventMemAgent",
+      "title": "EventMemAgent: Hierarchical Event-Centric Memory for Online Video Understanding with Adaptive Tool Use",
+      "authors": "Siwei Wen and Zhangcheng Wang and Xingjian Zhang and Lei Huang and Wenjun Wu",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2602.15329",
+      "link_label": "Paper",
+      "citation_keys": [
+        "wen2026eventmemagenthierarchicaleventcentricmemory"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based",
+        "evidence-acquisition/learned-policy",
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "yan2026pyravid",
+      "name": "PyraVid",
+      "title": "PyraVid: Hierarchical Multimodal Memory for Long-Horizon Video Reasoning",
+      "authors": "Yan, Sikuan and Dong, Sicheng and Wang, Haotong and Nie, Ercong and Liu, Yilun and Bi, Jinhe and Xu, Yingjie and Schwarzmann, Susanna and Trivisonno, Riccardo and Tresp, Volker and others",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2605.17065",
+      "url": "https://arxiv.org/abs/2605.17065",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yan2026pyravid"
+      ],
+      "categories": [
+        "evidence-acquisition/retrieval-based"
+      ]
+    },
+    {
+      "id": "ye2025re",
+      "name": "T*",
+      "title": "Re-thinking temporal search for long-form video understanding",
+      "authors": "Ye, Jinhui and Wang, Zihan and Sun, Haosen and Chandrasegaran, Keshigeyan and Durante, Zane and Eyzaguirre, Cristobal and Bisk, Yonatan and Niebles, Juan Carlos and Adeli, Ehsan and Fei-Fei, Li and others",
+      "year": 2025,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Re-thinking%20temporal%20search%20for%20long-form%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "ye2025re"
+      ],
+      "categories": [
+        "evidence-acquisition/hierarchical"
+      ]
+    },
+    {
+      "id": "pan2025timesearch",
+      "name": "TimeSearch",
+      "title": "Timesearch: Hierarchical video search with spotlight and reflection for human-like long video understanding",
+      "authors": "Pan, Junwen and Zhang, Rui and Wan, Xin and Zhang, Yuan and Lu, Ming and She, Qi",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2504.01407",
+      "url": "https://arxiv.org/abs/2504.01407",
+      "link_label": "Paper",
+      "citation_keys": [
+        "pan2025timesearch"
+      ],
+      "categories": [
+        "evidence-acquisition/hierarchical",
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "lian2026verbatim",
+      "name": "MM-MEM",
+      "title": "From verbatim to gist: Distilling pyramidal multimodal memory via semantic information bottleneck for long-horizon video agents",
+      "authors": "Lian, Niu and Wang, Yuting and Yao, Hanshu and Wang, Jinpeng and Chen, Bin and Wang, Yaowei and Zhang, Min and Xia, Shu-Tao",
+      "year": 2026,
+      "venue": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "url": "https://scholar.google.com/scholar?q=%22From%20verbatim%20to%20gist%3A%20Distilling%20pyramidal%20multimodal%20memory%20via%20semantic%20information%20bottleneck%20for%20long-horizon%20video%20agents%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "lian2026verbatim"
+      ],
+      "categories": [
+        "evidence-acquisition/hierarchical",
+        "memory-state/latent-compressed"
+      ]
+    },
+    {
+      "id": "videoarm",
+      "name": "VideoARM",
+      "title": "Videoarm: Agentic reasoning over hierarchical memory for long-form video understanding",
+      "authors": "Yin, Yufei and Meng, Qianke and Chen, Minghao and Ding, Jiajun and Shao, Zhenwei and Yu, Zhou",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Videoarm%3A%20Agentic%20reasoning%20over%20hierarchical%20memory%20for%20long-form%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "videoarm"
+      ],
+      "categories": [
+        "evidence-acquisition/hierarchical"
+      ]
+    },
+    {
+      "id": "yin2026hierarchical",
+      "name": "HAVEN",
+      "title": "Hierarchical Long Video Understanding with Audiovisual Entity Cohesion and Agentic Search",
+      "authors": "Yin, Xinlei and Peng, Xiulian and Li, Xiao and Xiong, Zhiwei and Lu, Yan",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2601.13719",
+      "url": "https://arxiv.org/abs/2601.13719",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yin2026hierarchical"
+      ],
+      "categories": [
+        "evidence-acquisition/hierarchical"
+      ]
+    },
+    {
+      "id": "xu2026agenticactiveomnimodalperception",
+      "name": "AOP-Agent",
+      "title": "Agentic Active Omni-Modal Perception for Multi-Hop Audio-Visual Reasoning",
+      "authors": "Ke Xu and Yuhao Wang and Ziyang Cheng and Hongcheng Liu and Yanfeng Wang and Yu Wang",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2605.28192",
+      "link_label": "Paper",
+      "citation_keys": [
+        "xu2026agenticactiveomnimodalperception"
+      ],
+      "categories": [
+        "evidence-acquisition/hierarchical"
+      ]
+    },
+    {
+      "id": "chi2026gopagenmotionawareefficientagentic",
+      "name": "GOPAgen",
+      "title": "GOPAgen: Motion-Aware and Efficient Agentic Long-Video Understanding with Structural Memory and Hierarchical Reasoning",
+      "authors": "Haozhe Chi and Yang Jin and Yadong Mu",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2606.06532",
+      "link_label": "Paper",
+      "citation_keys": [
+        "chi2026gopagenmotionawareefficientagentic"
+      ],
+      "categories": [
+        "evidence-acquisition/hierarchical"
+      ]
+    },
+    {
+      "id": "ji2026homerunderstandinglongformvideos",
+      "name": "Homer",
+      "title": "Homer: Understanding Long-form Videos with Hierarchical Memory and Agentic Reasoning",
+      "authors": "Yixin Ji and Fanghua Ye and Juntao Li and Bo Zhao and Zexuan Qiu and Zhaopeng Tu and Liefeng Bo and Min Zhang",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2607.02588",
+      "link_label": "Paper",
+      "citation_keys": [
+        "ji2026homerunderstandinglongformvideos"
+      ],
+      "categories": [
+        "evidence-acquisition/hierarchical"
+      ]
+    },
+    {
+      "id": "vipergpt",
+      "name": "ViperGPT",
+      "title": "Vipergpt: Visual inference via python execution for reasoning",
+      "authors": "Surís, Dídac and Menon, Sachit and Vondrick, Carl",
+      "year": 2023,
+      "venue": "Proceedings of the IEEE/CVF international conference on computer vision",
+      "url": "https://scholar.google.com/scholar?q=%22Vipergpt%3A%20Visual%20inference%20via%20python%20execution%20for%20reasoning%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "vipergpt"
+      ],
+      "categories": [
+        "evidence-acquisition/programmatic"
+      ]
+    },
+    {
+      "id": "rauf2026hpp",
+      "name": "HPP",
+      "title": "HPP: Hierarchical Programmatic Probing for Long Video Understanding by Decoupling Perception and Reasoning",
+      "authors": "Rauf, Awais and Hasssan, Ahmed and Slabaugh, Greg",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2606.21734",
+      "url": "https://arxiv.org/abs/2606.21734",
+      "link_label": "Paper",
+      "citation_keys": [
+        "rauf2026hpp"
+      ],
+      "categories": [
+        "evidence-acquisition/programmatic"
+      ]
+    },
+    {
+      "id": "yang2025eea",
+      "name": "EEA",
+      "title": "EEA: Exploration-Exploitation Agent for Long Video Understanding",
+      "authors": "Yang, Te and Zhu, Xiangyu and Wang, Bo and Chen, Quan and Jiang, Peng and Lei, Zhen",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2512.03500",
+      "url": "https://arxiv.org/abs/2512.03500",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yang2025eea"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy"
+      ]
+    },
+    {
+      "id": "Ding2025VideoZoomerRT",
+      "name": "VideoZoomer",
+      "title": "VideoZoomer: Reinforcement-Learned Temporal Focusing for Long Video Reasoning",
+      "authors": "Yang Ding and Yizhen Zhang and Xin Lai and Ruihang Chu and Yujiu Yang",
+      "year": 2025,
+      "venue": "ArXiv",
+      "url": "https://api.semanticscholar.org/CorpusID:284313050",
+      "link_label": "Paper",
+      "citation_keys": [
+        "Ding2025VideoZoomerRT"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy"
+      ]
+    },
+    {
+      "id": "tang2026tspo",
+      "name": "TSPO",
+      "title": "Tspo: Temporal sampling policy optimization for long-form video language understanding",
+      "authors": "Tang, Canhui and Han, Zifan and Sun, Hongbo and Zhou, Sanping and Zhang, Xuchong and Wei, Xin and Yuan, Ye and Zhang, Huayu and Xu, Jinglin and Sun, Hao",
+      "year": 2026,
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://scholar.google.com/scholar?q=%22Tspo%3A%20Temporal%20sampling%20policy%20optimization%20for%20long-form%20video%20language%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "tang2026tspo"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy"
+      ]
+    },
+    {
+      "id": "ouyang2026conan",
+      "name": "Conan",
+      "title": "Conan: Progressive learning to reason like a detective over multi-scale visual evidence",
+      "authors": "Ouyang, Kun and Liu, Yuanxin and Yao, Linli and Cai, Yishuo and Zhou, Hao and Meng, Fandong and Zhou, Jie and Sun, Xu",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Conan%3A%20Progressive%20learning%20to%20reason%20like%20a%20detective%20over%20multi-scale%20visual%20evidence%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "ouyang2026conan"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy"
+      ]
+    },
+    {
+      "id": "yang2026longvt",
+      "name": "LongVT",
+      "title": "Longvt: Incentivizing\" thinking with long videos\" via native tool calling",
+      "authors": "Yang, Zuhao and Wang, Sudong and Zhang, Kaichen and Wu, Keming and Leng, Sicong and Zhang, Yifan and Li, Bo and Qin, Chengwei and Lu, Shijian and Li, Xingxuan and others",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Longvt%3A%20Incentivizing%22%20thinking%20with%20long%20videos%22%20via%20native%20tool%20calling%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "yang2026longvt"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy"
+      ]
+    },
+    {
+      "id": "eva",
+      "name": "EVA",
+      "title": "EVA: Efficient Reinforcement Learning for End-to-End Video Agent",
+      "authors": "Zhang, Yaolun and Wang, Ruohui and Wang, Jiahao and Tang, Yepeng and Zheng, Xuanyu and Duan, Haonan and Lu, Hao and Deng, Hanming and Lu, Lewei",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22EVA%3A%20Efficient%20Reinforcement%20Learning%20for%20End-to-End%20Video%20Agent%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "eva"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy",
+        "control-planning/learned-control"
+      ]
+    },
+    {
+      "id": "sage",
+      "name": "SAGE",
+      "title": "Sage: Training smart any-horizon agents for long video reasoning with reinforcement learning",
+      "authors": "Jain, Jitesh and Li, Jialuo and Ma, Zixian and Zhang, Jieyu and Kim, Chris Dongjoo and Lee, Sangho and Tripathi, Rohun and Gupta, Tanmay and Clark, Christopher and Shi, Humphrey and others",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Sage%3A%20Training%20smart%20any-horizon%20agents%20for%20long%20video%20reasoning%20with%20reinforcement%20learning%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "sage"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy",
+        "control-planning/learned-control"
+      ]
+    },
+    {
+      "id": "zhang2026thinking",
+      "name": "VITAL",
+      "title": "Thinking with videos: Multimodal tool-augmented reinforcement learning for long video reasoning",
+      "authors": "Zhang, Haoji and Gu, Xin and Li, Jiawen and Ma, Chixiang and Bai, Sule and Zhang, Chubin and Zhang, Bowen and Zhou, Zhichao and He, Dongliang and Tang, Yansong",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Thinking%20with%20videos%3A%20Multimodal%20tool-augmented%20reinforcement%20learning%20for%20long%20video%20reasoning%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "zhang2026thinking"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy",
+        "control-planning/learned-control"
+      ]
+    },
+    {
+      "id": "zhou2026reagent",
+      "name": "ReAgent-V",
+      "title": "Reagent-v: A reward-driven multi-agent framework for video understanding",
+      "authors": "Zhou, Yiyang and He, Yangfan and Su, Yaofeng and Han, Siwei and Jang, Joel and Bertasius, Gedas and Bansal, Mohit and Yao, Huaxiu",
+      "year": 2026,
+      "venue": "Advances in Neural Information Processing Systems",
+      "url": "https://scholar.google.com/scholar?q=%22Reagent-v%3A%20A%20reward-driven%20multi-agent%20framework%20for%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "zhou2026reagent"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy",
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "zhang2026vsearcherlonghorizonmultimodalsearch",
+      "name": "VSearcher",
+      "title": "VSearcher: Long-Horizon Multimodal Search Agent via Reinforcement Learning",
+      "authors": "Ruiyang Zhang and Qianguo Sun and Chao Song and Yiyan Qi and Zhedong Zheng",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2603.02795",
+      "link_label": "Paper",
+      "citation_keys": [
+        "zhang2026vsearcherlonghorizonmultimodalsearch"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy"
+      ]
+    },
+    {
+      "id": "yang2026paravttamingtoolprior",
+      "name": "ParaVT",
+      "title": "ParaVT: Taming the Tool Prior Paradox for Parallel Tool Use in Agentic Video Reinforcement Learning",
+      "authors": "Zuhao Yang and Kaichen Zhang and Sudong Wang and Keming Wu and Zhongyu Yang and Bo Li and Xiaojuan Qi and Shijian Lu and Xingxuan Li and Lidong Bing",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2605.20342",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yang2026paravttamingtoolprior"
+      ],
+      "categories": [
+        "evidence-acquisition/learned-policy",
+        "control-planning/learned-control"
+      ]
+    },
+    {
+      "id": "wang2023lifelongmemory",
+      "name": "LifelongMemory",
+      "title": "Lifelongmemory: Leveraging llms for answering queries in long-form egocentric videos",
+      "authors": "Wang, Ying and Yang, Yanlai and Ren, Mengye",
+      "year": 2023,
+      "venue": "arXiv preprint arXiv:2312.05269",
+      "url": "https://arxiv.org/abs/2312.05269",
+      "link_label": "Paper",
+      "citation_keys": [
+        "wang2023lifelongmemory"
+      ],
+      "categories": [
+        "memory-state/caption-text",
+        "verification-aggregation/self-consistency"
+      ]
+    },
+    {
+      "id": "kahatapitiya2025language",
+      "name": "LangRepo",
+      "title": "Language repository for long video understanding",
+      "authors": "Kahatapitiya, Kumara and Ranasinghe, Kanchana and Park, Jongwoo and Ryoo, Michael S",
+      "year": 2025,
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2025",
+      "url": "https://scholar.google.com/scholar?q=%22Language%20repository%20for%20long%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "kahatapitiya2025language"
+      ],
+      "categories": [
+        "memory-state/caption-text"
+      ]
+    },
+    {
+      "id": "pang2025mr",
+      "name": "Mr. Video",
+      "title": "MR. Video: MapReduce as an Effective Principle for Long Video Understanding",
+      "authors": "Ziqi Pang and Yu-Xiong Wang",
+      "year": 2025,
+      "venue": "The Thirty-ninth Annual Conference on Neural Information Processing Systems",
+      "url": "https://openreview.net/forum?id=7n2Kv5BUz2",
+      "link_label": "Paper",
+      "citation_keys": [
+        "pang2025mr"
+      ],
+      "categories": [
+        "memory-state/caption-text"
+      ]
+    },
+    {
+      "id": "zhang2026silvr",
+      "name": "SiLVR",
+      "title": "SiLVR: A Simple Language-based Video Reasoning Framework",
+      "authors": "Ce Zhang and Yan-Bo Lin and Ziyang Wang and Mohit Bansal and Gedas Bertasius",
+      "year": 2026,
+      "venue": "Transactions on Machine Learning Research",
+      "url": "https://openreview.net/forum?id=mQZbh9Zlbw",
+      "link_label": "Paper",
+      "citation_keys": [
+        "zhang2026silvr"
+      ],
+      "categories": [
+        "memory-state/caption-text"
+      ]
+    },
+    {
+      "id": "yang2024doraemongpt",
+      "name": "DoraemonGPT",
+      "title": "DoraemonGPT: Toward Understanding Dynamic Scenes with Large Language Models (Exemplified as A Video Agent)",
+      "authors": "Zongxin Yang and Guikun Chen and Xiaodi Li and Wenguan Wang and Yi Yang",
+      "year": 2024,
+      "venue": "Forty-first International Conference on Machine Learning",
+      "url": "https://openreview.net/forum?id=QMy2RLnxGN",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yang2024doraemongpt"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "yeo2025gcagent",
+      "name": "GCAgent",
+      "title": "Gcagent: Long-video understanding via schematic and narrative episodic memory",
+      "authors": "Yeo, Jeong Hun and Chung, Sangyun and Park, Sungjune and Kim, Dae Hoe and Moon, Jinyoung and Ro, Yong Man",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2511.12027",
+      "url": "https://arxiv.org/abs/2511.12027",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yeo2025gcagent"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "wang2025video",
+      "name": "Video-EM",
+      "title": "Video-EM: Event-Centric Episodic Memory for Long-Form Video Understanding",
+      "authors": "Wang, Yun and Zhang, Long and Liu, Jingren and Yan, Jiaqi and Zhang, Zhanjie and Zheng, Jiahao and Ma, Ao and Ling, Run and Yang, Xun and Wu, Dapeng and others",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2508.09486",
+      "url": "https://arxiv.org/abs/2508.09486",
+      "link_label": "Paper",
+      "citation_keys": [
+        "wang2025video",
+        "wang2025episodic"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "egagent",
+      "name": "EGAgent",
+      "title": "Agentic Very Long Video Understanding",
+      "authors": "Rege, Aniket and Sadhu, Arka and Li, Yuliang and Li, Kejie and Vinayak, Ramya Korlakai and Chai, Yuning and Lee, Yong Jae and Kim, Hyo Jin",
+      "year": 2026,
+      "venue": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "url": "https://aclanthology.org/2026.acl-long.2161/",
+      "link_label": "Paper",
+      "citation_keys": [
+        "egagent"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "fan2025embodied",
+      "name": "Embodied VideoAgent",
+      "title": "Embodied videoagent: Persistent memory from egocentric videos and embodied sensors enables dynamic scene understanding",
+      "authors": "Fan, Yue and Ma, Xiaojian and Su, Rongpeng and Guo, Jun and Wu, Rujie and Chen, Xi and Li, Qing",
+      "year": 2025,
+      "venue": "2025 IEEE/CVF International Conference on Computer Vision (ICCV)",
+      "url": "https://scholar.google.com/scholar?q=%22Embodied%20videoagent%3A%20Persistent%20memory%20from%20egocentric%20videos%20and%20embodied%20sensors%20enables%20dynamic%20scene%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "fan2025embodied"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "cannons2025segments",
+      "name": "TCogMap",
+      "title": "From Segments to Scenes: Temporal Understanding in Autonomous Driving via Vision-Language Model",
+      "authors": "Cannons, Kevin and Alvar, Saeed Ranjbar and Hossain, Mohammad Asiful and Rezaei, Ahmad and Gholami, Mohsen and Heidarikhazaei, Alireza and Weimin, Zhou and Zhang, Yong and Akbari, Mohammad",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2512.05277",
+      "url": "https://arxiv.org/abs/2512.05277",
+      "link_label": "Paper",
+      "citation_keys": [
+        "cannons2025segments"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "yan2026ava",
+      "name": "AVA",
+      "title": "AVA: Towards Agentic Video Analytics with Vision Language Models",
+      "authors": "Yan, Yuxuan and Jiang, Shiqi and Cao, Ting and Yang, Yifan and Yang, Qianqian and Shu, Yuanchao and Yang, Yuqing and Qiu, Lili",
+      "year": 2026,
+      "venue": "23rd USENIX Symposium on Networked Systems Design and Implementation (NSDI 26)",
+      "url": "https://scholar.google.com/scholar?q=%22AVA%3A%20Towards%20Agentic%20Video%20Analytics%20with%20Vision%20Language%20Models%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "yan2026ava"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "li2026bridgingmodalitiesspanningtime",
+      "name": "MAGIC-Video",
+      "title": "Bridging Modalities, Spanning Time: Structured Memory for Ultra-Long Agentic Video Reasoning",
+      "authors": "Jiazheng Li and Chi-Hao Wu and Yunze Liu and Kaize Ding and Jundong Li and Chuxu Zhang",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2605.08271",
+      "link_label": "Paper",
+      "citation_keys": [
+        "li2026bridgingmodalitiesspanningtime"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "chen2026memdreamer",
+      "name": "MemDreamer",
+      "title": "MemDreamer: Decoupling Perception and Reasoning for Long Video Understanding via Hierarchical Graph Memory and Agentic Retrieval Mechanism",
+      "authors": "Chen, Cong and Gan, Guo and Ji, Kaixiang and Zhang, ChaoYang and Yang, Zhen and Yao, Guangming and Chen, Hao and Chen, Jingdong and Yuan, Yi and Shen, Chunhua",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2606.07512",
+      "url": "https://arxiv.org/abs/2606.07512",
+      "link_label": "Paper",
+      "citation_keys": [
+        "chen2026memdreamer"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "yeo2026worldmm",
+      "name": "WorldMM",
+      "title": "Worldmm: Dynamic multimodal memory agent for long video reasoning",
+      "authors": "Yeo, Woongyeong and Kim, Kangsan and Yoon, Jaehong and Hwang, Sung Ju",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Worldmm%3A%20Dynamic%20multimodal%20memory%20agent%20for%20long%20video%20reasoning%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "yeo2026worldmm"
+      ],
+      "categories": [
+        "memory-state/structured"
+      ]
+    },
+    {
+      "id": "song2024moviechat",
+      "name": "MovieChat",
+      "title": "Moviechat: From dense token to sparse memory for long video understanding",
+      "authors": "Song, Enxin and Chai, Wenhao and Wang, Guanhong and Zhang, Yucheng and Zhou, Haoyang and Wu, Feiyang and Chi, Haozhe and Guo, Xun and Ye, Tian and Zhang, Yanting and others",
+      "year": 2024,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Moviechat%3A%20From%20dense%20token%20to%20sparse%20memory%20for%20long%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "song2024moviechat"
+      ],
+      "categories": [
+        "memory-state/latent-compressed"
+      ]
+    },
+    {
+      "id": "he2024ma",
+      "name": "MA-LMM",
+      "title": "Ma-lmm: Memory-augmented large multimodal model for long-term video understanding",
+      "authors": "He, Bo and Li, Hengduo and Jang, Young Kyun and Jia, Menglin and Cao, Xuefei and Shah, Ashish and Shrivastava, Abhinav and Lim, Ser-Nam",
+      "year": 2024,
+      "venue": "Proceedings of the IEEE/CVF conference on computer vision and pattern recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Ma-lmm%3A%20Memory-augmented%20large%20multimodal%20model%20for%20long-term%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "he2024ma"
+      ],
+      "categories": [
+        "memory-state/latent-compressed"
+      ]
+    },
+    {
+      "id": "wang2026streammeco",
+      "name": "StreamMeCo",
+      "title": "Streammeco: Long-term agent memory compression for efficient streaming video understanding",
+      "authors": "Wang, Junxi and Sun, Te and Zhu, Jiayi and Li, Junxian and Xu, Haowen and Wen, Zichen and Hu, Xuming and Li, Zhiyu and Zhang, Linfeng",
+      "year": 2026,
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2026",
+      "url": "https://scholar.google.com/scholar?q=%22Streammeco%3A%20Long-term%20agent%20memory%20compression%20for%20efficient%20streaming%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "wang2026streammeco"
+      ],
+      "categories": [
+        "memory-state/latent-compressed",
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "yang2026memorycardtopicawaremultimodalclue",
+      "name": "MemoryCard",
+      "title": "MemoryCard: Topic-Aware Multi-Modal Clue Compression for Long-Video Question Answering",
+      "authors": "Qing Yang and Pengcheng Huang and Xinze Li and Zhenghao Liu and Yukun Yan and Yu Gu and Ge Yu and Gang Li and Maosong Sun",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2606.05917",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yang2026memorycardtopicawaremultimodalclue"
+      ],
+      "categories": [
+        "memory-state/latent-compressed"
+      ]
+    },
+    {
+      "id": "fan2026bridgingvideoqavideoguidedagentic",
+      "name": "TASKER",
+      "title": "Bridging VideoQA and Video-Guided Agentic Tasks via Generalized Keyframe Extraction",
+      "authors": "Sunqi Fan and Qingle Liu and Runqi Yin and Meng-Hao Guo and Shuojin Yang",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2606.29445",
+      "link_label": "Paper",
+      "citation_keys": [
+        "fan2026bridgingvideoqavideoguidedagentic"
+      ],
+      "categories": [
+        "memory-state/latent-compressed"
+      ]
+    },
+    {
+      "id": "yang2025streamagent",
+      "name": "StreamAgent",
+      "title": "Streamagent: Towards anticipatory agents for streaming video understanding",
+      "authors": "Yang, Haolin and Tang, Feilong and Zhao, Lingxiao and Zhuang, Xinlin and Lu, Yifan and An, Xiang and Hu, Ming and Zhang, Xiaofeng and Swikir, Abdalla and He, Junjun and others",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2508.01875",
+      "url": "https://arxiv.org/abs/2508.01875",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yang2025streamagent"
+      ],
+      "categories": [
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "qian2025dispider",
+      "name": "Dispider",
+      "title": "Dispider: Enabling video llms with active real-time interaction via disentangled perception, decision, and reaction",
+      "authors": "Qian, Rui and Ding, Shuangrui and Dong, Xiaoyi and Zhang, Pan and Zang, Yuhang and Cao, Yuhang and Lin, Dahua and Wang, Jiaqi",
+      "year": 2025,
+      "venue": "Proceedings of the Computer Vision and Pattern Recognition Conference",
+      "url": "https://scholar.google.com/scholar?q=%22Dispider%3A%20Enabling%20video%20llms%20with%20active%20real-time%20interaction%20via%20disentangled%20perception%2C%20decision%2C%20and%20reaction%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "qian2025dispider"
+      ],
+      "categories": [
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "wang2026streambridge",
+      "name": "StreamBridge",
+      "title": "Streambridge: Turning your offline video large language model into a proactive streaming assistant",
+      "authors": "Wang, Haibo and Feng, Bo and Lai, Zhengfeng and Xu, Mingze and Li, Shiyu and Ge, Weifeng and Dehghan, Afshin and Cao, Meng and Huang, Ping",
+      "year": 2026,
+      "venue": "Advances in Neural Information Processing Systems",
+      "url": "https://scholar.google.com/scholar?q=%22Streambridge%3A%20Turning%20your%20offline%20video%20large%20language%20model%20into%20a%20proactive%20streaming%20assistant%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "wang2026streambridge"
+      ],
+      "categories": [
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "li2026visual",
+      "name": "VAM",
+      "title": "Visual Agentic Memory: Enabling Online Long Video Understanding via Online Indexing, Hierarchical Memory, and Agentic Retrieval",
+      "authors": "Li, Aiden Yiliu and Numan, Nels and Steed, Anthony",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2605.16481",
+      "url": "https://arxiv.org/abs/2605.16481",
+      "link_label": "Paper",
+      "citation_keys": [
+        "li2026visual"
+      ],
+      "categories": [
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "zhang2026think",
+      "name": "TaYS",
+      "title": "Think-as-you-see: Streaming chain-of-thought reasoning for large vision-language models",
+      "authors": "Zhang, Jialiang and Tong, Junlong and Lin, Junyan and Wu, Hao and Sun, Yirong and Ma, Yunpu and Shen, Xiaoyu",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Think-as-you-see%3A%20Streaming%20chain-of-thought%20reasoning%20for%20large%20vision-language%20models%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "zhang2026think"
+      ],
+      "categories": [
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "liu2026thinking",
+      "name": "ThinkStream",
+      "title": "Thinking in streaming video",
+      "authors": "Liu, Zikang and Guo, Longteng and Li, Handong and Zhen, Ru and He, Xingjian and Ji, Ruyi and Ren, Xiaoming and Zhang, Yanhao and Lu, Haonan and Liu, Jing",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2603.12938",
+      "url": "https://arxiv.org/abs/2603.12938",
+      "link_label": "Paper",
+      "citation_keys": [
+        "liu2026thinking"
+      ],
+      "categories": [
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "xu2026streamingvlm",
+      "name": "StreamingVLM",
+      "title": "StreamingVLM: Real-Time Understanding for Infinite Video Streams",
+      "authors": "Ruyi Xu and Guangxuan Xiao and Yukang Chen and Liuning He and Kelly Peng and Yao Lu and Song Han",
+      "year": 2026,
+      "venue": "The Fourteenth International Conference on Learning Representations",
+      "url": "https://openreview.net/forum?id=gVbPWbA97s",
+      "link_label": "Paper",
+      "citation_keys": [
+        "xu2026streamingvlm"
+      ],
+      "categories": [
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "nie2026lightomnireflexreasoningagentic",
+      "name": "Light-Omni",
+      "title": "Light-Omni: Reflex over Reasoning in Agentic Video Understanding with Long-Term Memory",
+      "authors": "Chang Nie and Jiaju Wei and Junlan Feng and Chaoyou Fu and Caifeng Shan",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2607.05511",
+      "link_label": "Paper",
+      "citation_keys": [
+        "nie2026lightomnireflexreasoningagentic"
+      ],
+      "categories": [
+        "memory-state/streaming-online"
+      ]
+    },
+    {
+      "id": "min2024morevqa",
+      "name": "MoReVQA",
+      "title": "Morevqa: Exploring modular reasoning models for video question answering",
+      "authors": "Min, Juhong and Buch, Shyamal and Nagrani, Arsha and Cho, Minsu and Schmid, Cordelia",
+      "year": 2024,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Morevqa%3A%20Exploring%20modular%20reasoning%20models%20for%20video%20question%20answering%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "min2024morevqa"
+      ],
+      "categories": [
+        "control-planning/fixed-workflow"
+      ]
+    },
+    {
+      "id": "videoinsta",
+      "name": "VideoINSTA",
+      "title": "Videoinsta: Zero-shot long video understanding via informative spatial-temporal reasoning with llms",
+      "authors": "Liao, Ruotong and Erler, Max and Wang, Huiyu and Zhai, Guangyao and Zhang, Gengyuan and Ma, Yunpu and Tresp, Volker",
+      "year": 2024,
+      "venue": "Findings of the Association for Computational Linguistics: EMNLP 2024",
+      "url": "https://scholar.google.com/scholar?q=%22Videoinsta%3A%20Zero-shot%20long%20video%20understanding%20via%20informative%20spatial-temporal%20reasoning%20with%20llms%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "videoinsta"
+      ],
+      "categories": [
+        "control-planning/fixed-workflow"
+      ]
+    },
+    {
+      "id": "vca",
+      "name": "VCA",
+      "title": "Vca: Video curious agent for long video understanding",
+      "authors": "Yang, Zeyuan and Chen, Delin and Yu, Xueyang and Shen, Maohao and Gan, Chuang",
+      "year": 2025,
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+      "url": "https://scholar.google.com/scholar?q=%22Vca%3A%20Video%20curious%20agent%20for%20long%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "vca"
+      ],
+      "categories": [
+        "control-planning/fixed-workflow"
+      ]
+    },
+    {
+      "id": "videochata1",
+      "name": "VideoChat-A1",
+      "title": "Videochat-a1: Thinking with long videos by chain-of-shot reasoning",
+      "authors": "Wang, Zikang and Chen, Boyu and Yue, Zhengrong and Wang, Yi and Qiao, Yu and Wang, Limin and Wang, Yali",
+      "year": 2026,
+      "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+      "url": "https://scholar.google.com/scholar?q=%22Videochat-a1%3A%20Thinking%20with%20long%20videos%20by%20chain-of-shot%20reasoning%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "videochata1"
+      ],
+      "categories": [
+        "control-planning/fixed-workflow"
+      ]
+    },
+    {
+      "id": "yang2026svagentstorylineguidedlongvideo",
+      "name": "SVAgent",
+      "title": "SVAgent: Storyline-Guided Long Video Understanding via Cross-Modal Multi-Agent Collaboration",
+      "authors": "Zhongyu Yang and Zuhao Yang and Shuo Zhan and Tan Yue and Wei Pang and Yingfang Yuan",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2604.05079",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yang2026svagentstorylineguidedlongvideo"
+      ],
+      "categories": [
+        "control-planning/fixed-workflow",
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "zhang2024omagent",
+      "name": "OmAgent",
+      "title": "Omagent: A multi-modal agent framework for complex video understanding with task divide-and-conquer",
+      "authors": "Zhang, Lu and Zhao, Tiancheng and Ying, Heting and Ma, Yibo and Lee, Kyusong",
+      "year": 2024,
+      "venue": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+      "url": "https://scholar.google.com/scholar?q=%22Omagent%3A%20A%20multi-modal%20agent%20framework%20for%20complex%20video%20understanding%20with%20task%20divide-and-conquer%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "zhang2024omagent"
+      ],
+      "categories": [
+        "control-planning/autonomous-tool-use"
+      ]
+    },
+    {
+      "id": "long2026seeing",
+      "name": "M3-Agent",
+      "title": "Seeing, Listening, Remembering, and Reasoning: A Multimodal Agent with Long-Term Memory",
+      "authors": "Lin Long and Yichen He and Wentao Ye and Yiyuan Pan and Yuan Lin and Hang Li and Junbo Zhao and Wei Li",
+      "year": 2026,
+      "venue": "The Fourteenth International Conference on Learning Representations",
+      "url": "https://openreview.net/forum?id=PMz29A7Muq",
+      "link_label": "Paper",
+      "citation_keys": [
+        "long2026seeing"
+      ],
+      "categories": [
+        "control-planning/autonomous-tool-use"
+      ]
+    },
+    {
+      "id": "kurpath2026benchmarkomnimodalreasoninglong",
+      "name": "LongShOTAgent",
+      "title": "A Benchmark for Omni-Modal Reasoning in Long Videos",
+      "authors": "Mohammed Irfan Kurpath and Jaseel Muhammad Kaithakkodan and Jinxing Zhou and Sahal Shaji Mullappilly and Mohammad Almansoori and Noor Ahsan and Beknur Kalmakhanbet and Sambal Shikhar and Rishabh Lalla and Jean Lahoud and Mariette Awad and Fahad Shahbaz Khan and Salman Khan and Rao Muhammad Anwer and Hisham Cholakkal",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2512.16978",
+      "link_label": "Paper",
+      "citation_keys": [
+        "kurpath2026benchmarkomnimodalreasoninglong"
+      ],
+      "categories": [
+        "control-planning/autonomous-tool-use"
+      ]
+    },
+    {
+      "id": "liang2026videobrowseragenticopenwebvideo",
+      "name": "Video-BrowseComp",
+      "title": "Video-Browser: Towards Agentic Open-web Video Browsing",
+      "authors": "Zhengyang Liang and Yan Shu and Xiangrui Liu and Minghao Qin and Kaixin Liang and Nicu Sebe and Zheng Liu and Lizi Liao",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2512.23044",
+      "link_label": "Paper",
+      "citation_keys": [
+        "liang2026videobrowseragenticopenwebvideo"
+      ],
+      "categories": [
+        "control-planning/autonomous-tool-use"
+      ]
+    },
+    {
+      "id": "lenswalk",
+      "name": "LensWalk",
+      "title": "LensWalk: Agentic video understanding by planning how you see in videos",
+      "authors": "Li, Keliang and Li, Yansong and Shen, Hongze and Liu, Mengdi and Chang, Hong and Shan, Shiguang",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22LensWalk%3A%20Agentic%20video%20understanding%20by%20planning%20how%20you%20see%20in%20videos%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "lenswalk"
+      ],
+      "categories": [
+        "control-planning/autonomous-tool-use"
+      ]
+    },
+    {
+      "id": "tao2026activeperceptionagentomnimodal",
+      "name": "OmniAgent",
+      "title": "Active Perception Agent for Omnimodal Audio-Video Understanding",
+      "authors": "Keda Tao and Wenjie Du and Bohan Yu and Weiqiang Wang and Jian Liu and Huan Wang",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2512.23646",
+      "link_label": "Paper",
+      "citation_keys": [
+        "tao2026activeperceptionagentomnimodal"
+      ],
+      "categories": [
+        "control-planning/autonomous-tool-use"
+      ]
+    },
+    {
+      "id": "li2026omnigaianativeomnimodalai",
+      "name": "OmniAtlas",
+      "title": "OmniGAIA: Towards Native Omni-Modal AI Agents",
+      "authors": "Xiaoxi Li and Wenxiang Jiao and Jiarui Jin and Haoxuan Li and Hao Wang and Shijian Wang and Guanting Dong and Jiajie Jin and Yinuo Wang and Yuan Lu and Ji-Rong Wen and Zhicheng Dou and Zhouchen Lin",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2602.22897",
+      "link_label": "Paper",
+      "citation_keys": [
+        "li2026omnigaianativeomnimodalai"
+      ],
+      "categories": [
+        "control-planning/autonomous-tool-use"
+      ]
+    },
+    {
+      "id": "li2026videothinkerbuildingagenticvideollms",
+      "name": "VideoThinker",
+      "title": "VideoThinker: Building Agentic VideoLLMs with LLM-Guided Tool Reasoning",
+      "authors": "Chenglin Li and Qianglong Chen and Feng Han and Yikun Wang and Xingxi Yin and Yan Gong and Ruilin Li and Yin Zhang and Jiaqi Wang",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2601.15724",
+      "link_label": "Paper",
+      "citation_keys": [
+        "li2026videothinkerbuildingagenticvideollms"
+      ],
+      "categories": [
+        "control-planning/autonomous-tool-use"
+      ]
+    },
+    {
+      "id": "shang2024traveler",
+      "name": "TraveLER",
+      "title": "TraveLER: A Modular Multi-LMM Agent Framework for Video Question-Answering",
+      "authors": "Shang, Chuyi and You, Amos and Subramanian, Sanjay and Darrell, Trevor and Herzig, Roei",
+      "year": 2024,
+      "venue": "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+      "url": "https://scholar.google.com/scholar?q=%22TraveLER%3A%20A%20Modular%20Multi-LMM%20Agent%20Framework%20for%20Video%20Question-Answering%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "shang2024traveler"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "chen2025lvagent",
+      "name": "LVAgent",
+      "title": "Lvagent: Long video understanding by multi-round dynamical collaboration of mllm agents",
+      "authors": "Chen, Boyu and Yue, Zhengrong and Chen, Siran and Wang, Zikang and Liu, Yang and Li, Peng and Wang, Yali",
+      "year": 2025,
+      "venue": "Proceedings of the IEEE/CVF International Conference on Computer Vision",
+      "url": "https://scholar.google.com/scholar?q=%22Lvagent%3A%20Long%20video%20understanding%20by%20multi-round%20dynamical%20collaboration%20of%20mllm%20agents%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "chen2025lvagent"
+      ],
+      "categories": [
+        "control-planning/multi-agent",
+        "verification-aggregation/evidence-alignment-adjudication"
+      ]
+    },
+    {
+      "id": "kugo2025videomultiagents",
+      "name": "VideoMultiAgents",
+      "title": "Videomultiagents: A multi-agent framework for video question answering",
+      "authors": "Kugo, Noriyuki and Li, Xiang and Li, Zixin and Gupta, Ashish and Khatua, Arpandeep and Jain, Nidhish and Patel, Chaitanya and Kyuragi, Yuta and Ishii, Yasunori and Tanabiki, Masamoto and others",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2504.20091",
+      "url": "https://arxiv.org/abs/2504.20091",
+      "link_label": "Paper",
+      "citation_keys": [
+        "kugo2025videomultiagents"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "yan2026symphony",
+      "name": "Symphony",
+      "title": "Symphony: A Cognitively-Inspired Multi-Agent System for Long-Video Understanding",
+      "authors": "Yan, Haiyang and Zhou, Hongyun and Xu, Peng and Feng, Xiaoxue and Liu, Mengyi",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Symphony%3A%20A%20Cognitively-Inspired%20Multi-Agent%20System%20for%20Long-Video%20Understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "yan2026symphony"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "longvideoagent",
+      "name": "LongVideoAgent",
+      "title": "Longvideoagent: Multi-agent reasoning with long videos",
+      "authors": "Liu, Runtao and Liu, Ziyi and Tang, Jiaqi and Ma, Yue and Pi, Renjie and Zhang, Jipeng and Chen, Qifeng",
+      "year": 2026,
+      "venue": "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "url": "https://scholar.google.com/scholar?q=%22Longvideoagent%3A%20Multi-agent%20reasoning%20with%20long%20videos%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "longvideoagent"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "wong2025coach",
+      "name": "COACH",
+      "title": "COACH: Collaborative Agents for Contextual Highlighting–A Multi-Agent Framework for Sports Video Analysis",
+      "authors": "Wong, Tsz-To and Huang, Ching-Chun and Shuai, Hong-Han",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2512.01853",
+      "url": "https://arxiv.org/abs/2512.01853",
+      "link_label": "Paper",
+      "citation_keys": [
+        "wong2025coach"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "wang2026think",
+      "name": "VideoHV-Agent",
+      "title": "Think, Then Verify: A Hypothesis-Verification Multi-Agent Framework for Long Video Understanding",
+      "authors": "Wang, Zheng and Chen, Haoran and Qin, Haoxuan and Wei, Zhipeng and Qian, Tianwen and Bai, Cong",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Think%2C%20Then%20Verify%3A%20A%20Hypothesis-Verification%20Multi-Agent%20Framework%20for%20Long%20Video%20Understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "wang2026think"
+      ],
+      "categories": [
+        "control-planning/multi-agent",
+        "verification-aggregation/evidence-alignment-adjudication"
+      ]
+    },
+    {
+      "id": "zhang2026affectseekagenticaffectiveunderstanding",
+      "name": "AffectSeek",
+      "title": "AffectSeek: Agentic Affective Understanding in Long Videos under Vague User Queries",
+      "authors": "Zhen Zhang and Yuhang Yang and Yunxiang Jiang and Yuhuan Lu and Haifeng Lu and Zheng Lian and Runhao Zeng and Xiping Hu",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2605.05640",
+      "link_label": "Paper",
+      "citation_keys": [
+        "zhang2026affectseekagenticaffectiveunderstanding"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "zhu2026hicrewhierarchicalreasoninglongform",
+      "name": "HiCrew",
+      "title": "HiCrew: Hierarchical Reasoning for Long-Form Video Understanding via Question-Aware Multi-Agent Collaboration",
+      "authors": "Yuehan Zhu and Jingqi Zhao and Jiawen Zhao and Xudong Mao and Baoquan Zhao",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2604.21444",
+      "link_label": "Paper",
+      "citation_keys": [
+        "zhu2026hicrewhierarchicalreasoninglongform"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "kong2026impactcyclecontractbasedmultiagentclaimlevel",
+      "name": "IMPACT-CYCLE",
+      "title": "IMPACT-CYCLE: A Contract-Based Multi-Agent System for Claim-Level Supervisory Correction of Long-Video Semantic Memory",
+      "authors": "Weitong Kong and Di Wen and Kunyu Peng and David Schneider and Zeyun Zhong and Alexander Jaus and Zdravko Marinov and Jiale Wei and Ruiping Liu and Junwei Zheng and Yufan Chen and Lei Qi and Rainer Stiefelhagen",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2604.20136",
+      "link_label": "Paper",
+      "citation_keys": [
+        "kong2026impactcyclecontractbasedmultiagentclaimlevel"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "videochatm1",
+      "name": "VideoChat-M1",
+      "title": "Videochat-m1: Collaborative policy planning for video understanding via multi-agent reinforcement learning",
+      "authors": "Chen, Boyu and Wang, Zikang and Yue, Zhengrong and Yan, Kainan and Yu, Chenyun and Huang, Yi and Liu, Zijun and Wen, Yafei and Chen, Xiaoxin and Liu, Yang and others",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Videochat-m1%3A%20Collaborative%20policy%20planning%20for%20video%20understanding%20via%20multi-agent%20reinforcement%20learning%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "videochatm1"
+      ],
+      "categories": [
+        "control-planning/multi-agent"
+      ]
+    },
+    {
+      "id": "tian2026ego",
+      "name": "Ego-R1",
+      "title": "Ego-R1: Agentic Chain-of-Tool-Thought for Ultra-Long Egocentric Video Reasoning",
+      "authors": "Tian, Shulin and Wang, Ruiqi and Guo, Hongming and Wu, Penghao and Dong, Yuhao and Wang, Xiuying and Yang, Jingkang and Zhang, Hao and Zhu, Hongyuan and Liu, Ziwei",
+      "year": 2026,
+      "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "url": "https://scholar.google.com/scholar?q=%22Ego-R1%3A%20Agentic%20Chain-of-Tool-Thought%20for%20Ultra-Long%20Egocentric%20Video%20Reasoning%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "tian2026ego"
+      ],
+      "categories": [
+        "control-planning/learned-control"
+      ]
+    },
+    {
+      "id": "zou2026videobrain",
+      "name": "VideoBrain",
+      "title": "VideoBrain: Learning Adaptive Frame Sampling for Long Video Understanding",
+      "authors": "Zou, Junbo and Huang, Ziheng and Zhang, Shengjie and Zhang, Liwen and Shen, Weining",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2602.04094",
+      "url": "https://arxiv.org/abs/2602.04094",
+      "link_label": "Paper",
+      "citation_keys": [
+        "zou2026videobrain"
+      ],
+      "categories": [
+        "control-planning/learned-control"
+      ]
+    },
+    {
+      "id": "longvideor1",
+      "name": "LongVideo-R1",
+      "title": "Longvideo-r1: Smart navigation for low-cost long video understanding",
+      "authors": "Qiu, Jihao and Xie, Lingxi and Huo, Xinyue and Tian, Qi and Ye, Qixiang",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Longvideo-r1%3A%20Smart%20navigation%20for%20low-cost%20long%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "longvideor1"
+      ],
+      "categories": [
+        "control-planning/learned-control"
+      ]
+    },
+    {
+      "id": "Liu2026VideoTempo3HT",
+      "name": "VideoTemp-o3",
+      "title": "VideoTemp-o3: Harmonizing Temporal Grounding and Video Understanding in Agentic Thinking-with-Videos",
+      "authors": "Wenqi Liu and Yunxiao Wang and Shijie Ma and Mengxi Liu and Qile Su and Tianke Zhang and Haonan Fan and Changyi Liu and Kaiyu Jiang and Jiankang Chen and Kaiyu Tang and Bin Wen and Fan Yang and Tingting Gao and Han Li and Yinwei Wei and Xuemeng Song",
+      "year": 2026,
+      "venue": "ArXiv",
+      "url": "https://api.semanticscholar.org/CorpusID:285453932",
+      "link_label": "Paper",
+      "citation_keys": [
+        "Liu2026VideoTempo3HT"
+      ],
+      "categories": [
+        "control-planning/learned-control"
+      ]
+    },
+    {
+      "id": "pan2025timesearch-r",
+      "name": "TimeSearch-R",
+      "title": "TimeSearch-R: Adaptive Temporal Search for Long-Form Video Understanding via Self-Verification Reinforcement Learning",
+      "authors": "Pan, Junwen and Zhang, Qizhe and Zhang, Rui and Lu, Ming and Wan, Xin and Zhang, Yuan and Liu, Chang and She, Qi",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2511.05489",
+      "url": "https://arxiv.org/abs/2511.05489",
+      "link_label": "Paper",
+      "citation_keys": [
+        "pan2025timesearch-r"
+      ],
+      "categories": [
+        "verification-aggregation/self-consistency"
+      ]
+    },
+    {
+      "id": "reflexion",
+      "name": "Reflexion",
+      "title": "Reflexion: Language agents with verbal reinforcement learning",
+      "authors": "Shinn, Noah and Cassano, Federico and Gopinath, Ashwin and Narasimhan, Karthik and Yao, Shunyu",
+      "year": 2023,
+      "venue": "Advances in neural information processing systems",
+      "url": "https://scholar.google.com/scholar?q=%22Reflexion%3A%20Language%20agents%20with%20verbal%20reinforcement%20learning%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "reflexion"
+      ],
+      "categories": [
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "jeoung2024adaptive",
+      "name": "AVUA",
+      "title": "Adaptive video understanding agent: Enhancing efficiency with dynamic frame sampling and feedback-driven reasoning",
+      "authors": "Jeoung, Sullam and Huybrechts, Goeric and Ganesh, Bhavana and Galstyan, Aram and Bodapati, Sravan",
+      "year": 2024,
+      "venue": "arXiv preprint arXiv:2410.20252",
+      "url": "https://arxiv.org/abs/2410.20252",
+      "link_label": "Paper",
+      "citation_keys": [
+        "jeoung2024adaptive"
+      ],
+      "categories": [
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "cao2025masr",
+      "name": "MASR",
+      "title": "MASR: Self-Reflective Reasoning through Multimodal Hierarchical Attention Focusing for Agent-based Video Understanding",
+      "authors": "Cao, Shiwen and Zhang, Zhaoxing and Jiao, Junming and Qiao, Juyi and Song, Guowen and Shen, Rong and Meng, Xiangbing",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2504.17213",
+      "url": "https://arxiv.org/abs/2504.17213",
+      "link_label": "Paper",
+      "citation_keys": [
+        "cao2025masr"
+      ],
+      "categories": [
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "chen2026reflect",
+      "name": "Reflect-R1",
+      "title": "Reflect-R1: Evidence-Driven Reflection for Self-Correction in Long Video Understanding",
+      "authors": "Chen, Shuimu and Chen, Yuteng and Guan, Yuanshen and Cheng, Zebang and Zhang, Zeyu and Qin, Shengqian and Xia, Bin and Li, Jiaran and Yang, Wenming and Ma, Fei",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2606.27922",
+      "url": "https://arxiv.org/abs/2606.27922",
+      "link_label": "Paper",
+      "citation_keys": [
+        "chen2026reflect"
+      ],
+      "categories": [
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "bhosale2026craft",
+      "name": "CRAFT",
+      "title": "Craft: Critic-refined adaptive key-frame targeting for multimodal video question answering",
+      "authors": "Bhosale, Mahesh and Wasi, Abdul and Trivedi, Vishvesh and Yan, Pengyu and Gorugantu, Akhil VSS and Doermann, David",
+      "year": 2026,
+      "venue": "Proceedings of the 2nd Workshop on Multimodal Augmented Generation via Multimodal Retrieval (MAGMaR 2026)",
+      "url": "https://scholar.google.com/scholar?q=%22Craft%3A%20Critic-refined%20adaptive%20key-frame%20targeting%20for%20multimodal%20video%20question%20answering%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "bhosale2026craft"
+      ],
+      "categories": [
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "avp",
+      "name": "AVP",
+      "title": "Active video perception: Iterative evidence seeking for agentic long video understanding",
+      "authors": "Wang, Ziyang and Zhou, Honglu and Wang, Shijie and Li, Junnan and Xiong, Caiming and Savarese, Silvio and Bansal, Mohit and Ryoo, Michael S and Niebles, Juan Carlos",
+      "year": 2026,
+      "venue": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "url": "https://scholar.google.com/scholar?q=%22Active%20video%20perception%3A%20Iterative%20evidence%20seeking%20for%20agentic%20long%20video%20understanding%22",
+      "link_label": "Find paper",
+      "citation_keys": [
+        "avp"
+      ],
+      "categories": [
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "zou2026air",
+      "name": "A.I.R",
+      "title": "A.I.R.: Enabling Adaptive, Iterative, and Reasoning-based Frame Selection For Video Question Answering",
+      "authors": "Yuanhao Zou and Shengji Jin and Andong Deng and Youpeng Zhao and Jun Wang and Chen Chen",
+      "year": 2026,
+      "venue": "The Fourteenth International Conference on Learning Representations",
+      "url": "https://openreview.net/forum?id=SZVpOKw0YD",
+      "link_label": "Paper",
+      "citation_keys": [
+        "zou2026air"
+      ],
+      "categories": [
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "yin2026progressive",
+      "name": "ProVCA",
+      "title": "Progressive Video Condensation with MLLM Agent for Long-form Video Understanding",
+      "authors": "Yin, Yufei and Xing, Yuchen and Meng, Qianke and Chen, Minghao and Yang, Yan and Yu, Zhou",
+      "year": 2026,
+      "venue": "arXiv preprint arXiv:2604.02891",
+      "url": "https://arxiv.org/abs/2604.02891",
+      "link_label": "Paper",
+      "citation_keys": [
+        "yin2026progressive"
+      ],
+      "categories": [
+        "verification-aggregation/reflection-refine"
+      ]
+    },
+    {
+      "id": "zhi2025videoagent",
+      "name": "VideoAgent2",
+      "title": "VideoAgent2: Enhancing the LLM-Based Agent System for Long-Form Video Understanding by Uncertainty-Aware CoT",
+      "authors": "Zhuo Zhi and Qiangqiang Wu and Minghe Shen and Wenbo Li and Yinchuan Li and Kun Shao and Kaiwen Zhou",
+      "year": 2025,
+      "venue": "Workshop on Scaling Environments for Agents",
+      "url": "https://openreview.net/forum?id=MD8QyIZIoE",
+      "link_label": "Paper",
+      "citation_keys": [
+        "zhi2025videoagent"
+      ],
+      "categories": [
+        "verification-aggregation/confidence-calibration"
+      ]
+    },
+    {
+      "id": "qiu2026videoseal",
+      "name": "VideoSEAL",
+      "title": "VideoSEAL: Mitigating Evidence Misalignment in Agentic Long Video Understanding by Decoupling Answer Authority",
+      "authors": "Chenhao Qiu and Yechao Zhang and Xin Luo and Shien Song and Xusheng Liu",
+      "year": 2026,
+      "venue": "Forty-third International Conference on Machine Learning",
+      "url": "https://openreview.net/forum?id=RsPequeaiZ",
+      "link_label": "Paper",
+      "citation_keys": [
+        "qiu2026videoseal"
+      ],
+      "categories": [
+        "verification-aggregation/evidence-alignment-adjudication"
+      ]
+    },
+    {
+      "id": "li2025perceive",
+      "name": "CogniGPT",
+      "title": "Perceive, Reflect and Understand Long Video: Progressive Multi-Granular Clue Exploration with Interactive Agents",
+      "authors": "Li, Jiahua and Wei, Kun and Xu, Zhe and Su, Zibo and Yang, Xu and Deng, Cheng",
+      "year": 2025,
+      "venue": "arXiv preprint arXiv:2509.24943",
+      "url": "https://arxiv.org/abs/2509.24943",
+      "link_label": "Paper",
+      "citation_keys": [
+        "li2025perceive"
+      ],
+      "categories": [
+        "verification-aggregation/evidence-alignment-adjudication"
+      ]
+    },
+    {
+      "id": "sinha2026timeproveproposeverifyefficient",
+      "name": "TimeProVe",
+      "title": "TimeProVe: Propose, then Verify for Efficient Long Video Temporal Reasoning in Activities of Daily Living",
+      "authors": "Arkaprava Sinha and Dominick Reilly and Siddharth Krishnan and Hieu Le and Srijan Das",
+      "year": 2026,
+      "venue": "Preprint",
+      "url": "https://arxiv.org/abs/2606.20561",
+      "link_label": "Paper",
+      "citation_keys": [
+        "sinha2026timeproveproposeverifyefficient"
+      ],
+      "categories": [
+        "verification-aggregation/evidence-alignment-adjudication"
+      ]
+    }
+  ]
+}

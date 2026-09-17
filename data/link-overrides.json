@@ -1,0 +1,178 @@
+{
+  "wang2024videoagent": {
+    "url": "https://arxiv.org/abs/2403.10517",
+    "source": "https://arxiv.org/abs/2403.10517"
+  },
+  "yuan2025videodeepresearch": {
+    "url": "https://arxiv.org/abs/2506.10821",
+    "source": "https://arxiv.org/abs/2506.10821"
+  },
+  "ma2025drvideo": {
+    "url": "https://arxiv.org/abs/2406.12846",
+    "source": "https://arxiv.org/abs/2406.12846"
+  },
+  "ren2026videorag": {
+    "url": "https://arxiv.org/abs/2502.01549",
+    "source": "https://arxiv.org/abs/2502.01549"
+  },
+  "dvd": {
+    "url": "https://arxiv.org/abs/2505.18079",
+    "source": "https://arxiv.org/abs/2505.18079"
+  },
+  "lin2026videoseek": {
+    "url": "https://arxiv.org/abs/2603.20185",
+    "source": "https://arxiv.org/abs/2603.20185"
+  },
+  "ye2025re": {
+    "url": "https://arxiv.org/abs/2504.02259",
+    "source": "https://arxiv.org/abs/2504.02259"
+  },
+  "lian2026verbatim": {
+    "url": "https://arxiv.org/abs/2603.01455",
+    "source": "https://arxiv.org/abs/2603.01455"
+  },
+  "videoarm": {
+    "url": "https://arxiv.org/abs/2512.12360",
+    "source": "https://arxiv.org/abs/2512.12360"
+  },
+  "vipergpt": {
+    "url": "https://arxiv.org/abs/2303.08128",
+    "source": "https://arxiv.org/abs/2303.08128"
+  },
+  "tang2026tspo": {
+    "url": "https://arxiv.org/abs/2508.04369",
+    "source": "https://arxiv.org/abs/2508.04369"
+  },
+  "ouyang2026conan": {
+    "url": "https://arxiv.org/abs/2510.20470",
+    "source": "https://arxiv.org/abs/2510.20470"
+  },
+  "yang2026longvt": {
+    "url": "https://arxiv.org/abs/2511.20785",
+    "source": "https://arxiv.org/abs/2511.20785"
+  },
+  "eva": {
+    "url": "https://arxiv.org/abs/2603.22918",
+    "source": "https://arxiv.org/abs/2603.22918"
+  },
+  "sage": {
+    "url": "https://arxiv.org/abs/2512.13874",
+    "source": "https://arxiv.org/abs/2512.13874"
+  },
+  "zhang2026thinking": {
+    "url": "https://arxiv.org/abs/2508.04416",
+    "source": "https://arxiv.org/abs/2508.04416"
+  },
+  "zhou2026reagent": {
+    "url": "https://arxiv.org/abs/2506.01300",
+    "source": "https://arxiv.org/abs/2506.01300"
+  },
+  "kahatapitiya2025language": {
+    "url": "https://arxiv.org/abs/2403.14622",
+    "source": "https://arxiv.org/abs/2403.14622"
+  },
+  "fan2025embodied": {
+    "url": "https://arxiv.org/abs/2501.00358",
+    "source": "https://arxiv.org/abs/2501.00358"
+  },
+  "yeo2026worldmm": {
+    "url": "https://arxiv.org/abs/2512.02425",
+    "source": "https://arxiv.org/abs/2512.02425"
+  },
+  "song2024moviechat": {
+    "url": "https://arxiv.org/abs/2307.16449",
+    "source": "https://arxiv.org/abs/2307.16449"
+  },
+  "he2024ma": {
+    "url": "https://arxiv.org/abs/2404.05726",
+    "source": "https://arxiv.org/abs/2404.05726"
+  },
+  "qian2025dispider": {
+    "url": "https://arxiv.org/abs/2501.03218",
+    "source": "https://arxiv.org/abs/2501.03218"
+  },
+  "wang2026streambridge": {
+    "url": "https://arxiv.org/abs/2505.05467",
+    "source": "https://arxiv.org/abs/2505.05467"
+  },
+  "zhang2026think": {
+    "url": "https://arxiv.org/abs/2603.02872",
+    "source": "https://arxiv.org/abs/2603.02872"
+  },
+  "min2024morevqa": {
+    "url": "https://arxiv.org/abs/2404.06511",
+    "source": "https://arxiv.org/abs/2404.06511"
+  },
+  "videoinsta": {
+    "url": "https://arxiv.org/abs/2409.20365",
+    "source": "https://arxiv.org/abs/2409.20365"
+  },
+  "vca": {
+    "url": "https://arxiv.org/abs/2412.10471",
+    "source": "https://arxiv.org/abs/2412.10471"
+  },
+  "videochata1": {
+    "url": "https://arxiv.org/abs/2506.06097",
+    "source": "https://arxiv.org/abs/2506.06097"
+  },
+  "zhang2024omagent": {
+    "url": "https://arxiv.org/abs/2406.16620",
+    "source": "https://arxiv.org/abs/2406.16620"
+  },
+  "lenswalk": {
+    "url": "https://arxiv.org/abs/2603.24558",
+    "source": "https://arxiv.org/abs/2603.24558"
+  },
+  "shang2024traveler": {
+    "url": "https://arxiv.org/abs/2404.01476",
+    "source": "https://arxiv.org/abs/2404.01476"
+  },
+  "chen2025lvagent": {
+    "url": "https://arxiv.org/abs/2503.10200",
+    "source": "https://arxiv.org/abs/2503.10200"
+  },
+  "yan2026symphony": {
+    "url": "https://arxiv.org/abs/2603.17307",
+    "source": "https://arxiv.org/abs/2603.17307"
+  },
+  "longvideoagent": {
+    "url": "https://arxiv.org/abs/2512.20618",
+    "source": "https://arxiv.org/abs/2512.20618"
+  },
+  "wang2026think": {
+    "url": "https://arxiv.org/abs/2603.04977",
+    "source": "https://arxiv.org/abs/2603.04977"
+  },
+  "videochatm1": {
+    "url": "https://arxiv.org/abs/2511.19524",
+    "source": "https://arxiv.org/abs/2511.19524"
+  },
+  "tian2026ego": {
+    "url": "https://arxiv.org/abs/2506.13654",
+    "source": "https://arxiv.org/abs/2506.13654"
+  },
+  "longvideor1": {
+    "url": "https://arxiv.org/abs/2602.20913",
+    "source": "https://arxiv.org/abs/2602.20913"
+  },
+  "reflexion": {
+    "url": "https://arxiv.org/abs/2303.11366",
+    "source": "https://arxiv.org/abs/2303.11366"
+  },
+  "bhosale2026craft": {
+    "url": "https://arxiv.org/abs/2605.19075",
+    "source": "https://arxiv.org/abs/2605.19075"
+  },
+  "avp": {
+    "url": "https://arxiv.org/abs/2512.05774",
+    "source": "https://arxiv.org/abs/2512.05774"
+  },
+  "yan2026ava": {
+    "url": "https://www.usenix.org/conference/nsdi26/presentation/yan",
+    "source": "https://www.usenix.org/conference/nsdi26/presentation/yan"
+  },
+  "wang2026streammeco": {
+    "url": "https://aclanthology.org/2026.findings-acl.647/",
+    "source": "https://aclanthology.org/2026.findings-acl.647/"
+  }
+}

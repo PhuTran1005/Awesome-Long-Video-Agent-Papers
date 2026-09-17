@@ -1,0 +1,42 @@
+name: Suggest a paper
+description: Recommend a paper for the long-video agent collection.
+title: "[Paper] "
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Primary publication link
+      description: An arXiv, DOI, publisher, or proceedings URL.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Main taxonomy stage
+      options:
+        - Evidence Acquisition
+        - Memory & State Representation
+        - Control & Planning
+        - Verification & Aggregation
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Relevance and proposed mechanism
+      description: Explain the feedback loop or the paper's role as an agent-enabling baseline. Mention additional branches if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: bibtex
+    attributes:
+      label: BibTeX
+      render: bibtex
+    validations:
+      required: true

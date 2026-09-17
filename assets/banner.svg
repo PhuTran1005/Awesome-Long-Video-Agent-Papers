@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+  <title id="title">From Watching to Reasoning</title>
+  <desc id="desc">Agentic systems for long-form video understanding: acquire evidence, maintain memory, plan actions, and verify answers.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101c32"/><stop offset="1" stop-color="#172d42"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#5eead4"/><stop offset="1" stop-color="#93c5fd"/></linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#e0f2fe" stroke-opacity=".035"/></pattern>
+  </defs>
+  <rect width="1280" height="440" rx="24" fill="url(#bg)"/>
+  <rect width="1280" height="440" rx="24" fill="url(#grid)"/>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Arial, sans-serif">
+    <rect x="52" y="44" width="282" height="30" rx="15" fill="#5eead4" fill-opacity=".1" stroke="#5eead4" stroke-opacity=".25"/>
+    <circle cx="70" cy="59" r="4" fill="#5eead4"/>
+    <text x="84" y="64" font-size="12" font-weight="700" letter-spacing="2" fill="#99f6e4">THE LONG-VIDEO AGENT SURVEY</text>
+    <text x="50" y="147" font-size="62" font-weight="700" letter-spacing="-2" fill="#f8fafc">From Watching</text>
+    <text x="50" y="217" font-size="62" font-weight="700" letter-spacing="-2" fill="url(#accent)">to Reasoning.</text>
+    <text x="54" y="260" font-size="19" fill="#bfcedd">Agentic systems for long-form video understanding</text>
+    <text x="54" y="293" font-size="16" fill="#8fa7bf">A curated reading map of active evidence seeking.</text>
+    <path d="M55 344H585" stroke="#496076" stroke-width="2"/>
+    <g fill="#344a62"><rect x="55" y="329" width="40" height="30" rx="5"/><rect x="113" y="329" width="40" height="30" rx="5"/><rect x="171" y="329" width="40" height="30" rx="5"/><rect x="229" y="329" width="40" height="30" rx="5"/><rect x="287" y="329" width="40" height="30" rx="5"/><rect x="345" y="329" width="40" height="30" rx="5"/><rect x="403" y="329" width="40" height="30" rx="5"/><rect x="461" y="329" width="40" height="30" rx="5"/><rect x="519" y="329" width="40" height="30" rx="5"/></g>
+    <g fill="#5eead4"><rect x="171" y="329" width="40" height="30" rx="5"/><rect x="403" y="329" width="40" height="30" rx="5"/></g>
+    <text x="54" y="390" font-size="11" letter-spacing="1.6" fill="#8fa7bf">LONG VIDEOS. SELECTIVE ATTENTION. GROUNDED ANSWERS.</text>
+    <path d="M795 133H1085V313H795Z" fill="none" stroke="#4b657d" stroke-width="2" stroke-dasharray="5 7"/>
+    <rect x="698" y="87" width="218" height="100" rx="16" fill="#30283c" stroke="#8b5e89"/>
+    <text x="721" y="119" font-size="11" letter-spacing="2" fill="#f0abfc">01 / EVIDENCE</text>
+    <text x="720" y="150" font-size="25" font-weight="600" fill="#fae8ff">Acquire</text>
+    <rect x="968" y="87" width="218" height="100" rx="16" fill="#33312d" stroke="#857443"/>
+    <text x="991" y="119" font-size="11" letter-spacing="2" fill="#fcd34d">02 / STATE</text>
+    <text x="990" y="150" font-size="25" font-weight="600" fill="#fef3c7">Remember</text>
+    <rect x="968" y="263" width="218" height="100" rx="16" fill="#1b354f" stroke="#4c82b7"/>
+    <text x="991" y="295" font-size="11" letter-spacing="2" fill="#93c5fd">03 / CONTROL</text>
+    <text x="990" y="326" font-size="25" font-weight="600" fill="#dbeafe">Plan</text>
+    <rect x="698" y="263" width="218" height="100" rx="16" fill="#183b3a" stroke="#3b8776"/>
+    <text x="721" y="295" font-size="11" letter-spacing="2" fill="#6ee7b7">04 / VERIFICATION</text>
+    <text x="720" y="326" font-size="25" font-weight="600" fill="#d1fae5">Verify</text>
+    <g fill="#91aabe"><path d="m945 137-9-5v10z"/><path d="m1085 233-5-9h10z"/><path d="m933 313 9-5v10z"/><path d="m795 216-5 9h10z"/></g>
+    <text x="943" y="229" text-anchor="middle" font-size="12" letter-spacing="2" fill="#b4c7d9">THE AGENT LOOP</text>
+  </g>
+</svg>

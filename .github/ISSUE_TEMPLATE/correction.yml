@@ -1,0 +1,24 @@
+name: Correct an entry
+description: Report a metadata issue, duplicate, broken link, or taxonomy correction.
+title: "[Correction] "
+body:
+  - type: input
+    id: entry
+    attributes:
+      label: Method name or citation key
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+      description: Describe the current entry and the corrected information.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting source
+      description: Link to the publication or another primary source supporting the change.
+    validations:
+      required: true
