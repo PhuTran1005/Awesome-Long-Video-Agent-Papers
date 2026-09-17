@@ -25,7 +25,7 @@ Check both this list and the [taxonomy paper index](index.md) for duplicates, th
 
 Include the release date, method name, full paper title, and a short description of the contribution. Link to a primary publication page; include an official code repository or project page when available. Suggest one or more of the four taxonomy stages, or use **To be determined**.
 
-Use red badges for arXiv links, blue badges for conference/journal papers, white badges for GitHub repositories, purple badges for suggested research areas, and green badges for categories. See the [badge examples](../CONTRIBUTING.md#badge-style) for reusable Markdown. Leave an undecided category as plain **To be determined**.
+Use red badges for arXiv links, blue badges for conference/journal papers, white badges for GitHub repositories, purple badges for suggested research areas, and green badges for categories. See the [badge examples](../CONTRIBUTING.md#badge-style) for reusable Markdown, including rounded venue/year badges and live GitHub star counts. Leave an undecided category as plain **To be determined**.
 
 Provide the paper's BibTeX in the issue or pull request so maintainers can preserve its citation key when integrating it into the survey.
 

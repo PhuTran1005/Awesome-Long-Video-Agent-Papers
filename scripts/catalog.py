@@ -196,18 +196,43 @@ def venue_label(paper):
     return venue
 
 
-def badge(label, color, target=None):
-    """Build an accessible Shields.io badge with escaped static-badge text."""
-    encoded = quote(label.replace("-", "--").replace("_", "__"), safe="")
-    image = f"![{escape(label)}](https://img.shields.io/badge/{encoded}-{color}?style=flat-square)"
+def badge(label, color, target=None, *, message=None):
+    """Use rounded badges; an optional message creates a two-color badge."""
+    def encode(value):
+        return quote(str(value).replace("-", "--").replace("_", "__"), safe="")
+    content = encode(label)
+    alt = str(label)
+    if message is not None:
+        content += "-" + encode(message)
+        alt += " " + str(message)
+    options = "style=flat" + ("&labelColor=555" if message is not None else "")
+    if label == "GitHub":
+        options += "&logo=github&logoColor=181717"
+    image = f"![{escape(alt)}](https://img.shields.io/badge/{content}-{color}?{options})"
     return f"[{image}]({target})" if target else image
+
+
+def github_repository(url):
+    """Normalize a repository URL for the GitHub stars endpoint."""
+    parsed = urlsplit(url)
+    parts = parsed.path.strip("/").split("/")
+    assert parsed.scheme == "https" and parsed.hostname == "github.com" and len(parts) >= 2, url
+    owner, repo = parts[0], parts[1].removesuffix(".git")
+    assert re.fullmatch(r"[A-Za-z0-9-]+", owner) and re.fullmatch(r"[A-Za-z0-9_.-]+", repo), url
+    return owner + "/" + repo
+
+
+def github_stars_badge(url):
+    repo = github_repository(url)
+    image = f"![GitHub stars for {escape(repo)}](https://img.shields.io/github/stars/{repo}?style=social&label=Star)"
+    return f"[{image}](https://github.com/{repo})"
 
 
 def publication_badge(paper):
     venue = venue_label(paper)
     if venue == "arXiv" or (venue == "Preprint" and urlsplit(paper["url"]).hostname == "arxiv.org"):
-        return badge(f'arXiv {paper["year"]}', "red")
-    return badge(f'{venue} {paper["year"]}', "lightgrey" if venue == "Preprint" else "blue")
+        return badge("arXiv", "red", message=paper["year"])
+    return badge(venue, "lightgrey" if venue == "Preprint" else "blue", message=paper["year"])
 
 
 def row(paper, crosslinks=False):
@@ -222,7 +247,7 @@ def row(paper, crosslinks=False):
     else:
         links = badge("Paper", "blue" if venue_label(paper) != "Preprint" else "lightgrey", paper["url"])
     if paper.get("code_url"):
-        links += " " + badge("GitHub", "white", paper["code_url"])
+        links += " " + badge("GitHub", "white", paper["code_url"]) + " " + github_stars_badge(paper["code_url"])
     links += f' · [BibTeX](../references.bib#L{paper["bib_line"]})'
     publication = publication_badge(paper)
     if crosslinks:
@@ -286,8 +311,7 @@ def validate(data):
         assert paper["url"].startswith("https://"), paper["id"]
         assert paper["link_label"] in ("Paper", "Find paper")
         if paper.get("code_url"):
-            code = urlsplit(paper["code_url"])
-            assert code.scheme == "https" and code.hostname == "github.com" and len(code.path.strip("/").split("/")) >= 2, paper["id"]
+            github_repository(paper["code_url"])
         assert all(paper[field] for field in ("name", "title", "authors", "year", "venue"))
     print(f"Validated {len(papers)} papers, {len(keys)} citation keys, {len(allowed)} categories.")
 
@@ -345,6 +369,16 @@ def main():
             if paper["id"] in overrides:
                 paper["url"] = overrides[paper["id"]]["url"]
                 paper["link_label"] = "Paper"
+    code_links_path = ROOT / "data/code-links.json"
+    if code_links_path.exists():
+        code_links = json.loads(code_links_path.read_text())
+        assert set(code_links) <= {p["id"] for p in data["papers"]}, "Unknown code-link ID"
+        for key, entry in code_links.items():
+            github_repository(entry["url"])
+            assert entry["source"].startswith("https://"), key
+        for paper in data["papers"]:
+            if paper["id"] in code_links:
+                paper["code_url"] = code_links[paper["id"]]["url"]
     validate(data)
     stale = []
     for path, content in render(data).items():

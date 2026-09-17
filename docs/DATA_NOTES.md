@@ -22,7 +22,7 @@ Direct URLs are taken from bibliography URL fields, DOI fields, and complete arX
 
 The structured catalog retains the original imported link; overrides are applied when rendering the Markdown pages. Consumers should merge the override map by paper ID to use the enriched links.
 
-A **Paper** link identifies a publication or preprint. **Find paper** is a clearly labeled title search used only when a direct identifier is missing. Code repositories are not inferred from method names.
+A **Paper** link identifies a publication or preprint. **Find paper** is a clearly labeled title search used only when a direct identifier is missing. Code repositories are not inferred from method names. Verified official repositories and their primary sources are stored in [code-links.json](../data/code-links.json); the renderer merges them by paper ID. This map survives manuscript re-imports. The initial code-link collection is a verified subset, not an exhaustive audit of code availability. Star badges query Shields.io dynamically and may be cached; star counts are not stored in the catalog.
 
 Publication years and venues follow the supplied bibliography. They have **not** undergone a full independent venue audit. For example, some supplied records list a 2026 bibliographic year for NeurIPS volume 38; the collection preserves those records rather than silently changing the survey's bibliography. Preprint release dates may also precede publication years.
 

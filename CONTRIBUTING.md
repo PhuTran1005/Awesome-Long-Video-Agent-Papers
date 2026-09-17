@@ -50,16 +50,21 @@ The four taxonomy pages and `papers/index.md` are generated; `papers/recent-addi
 Follow the [badge colors](README.md#badge-colors) throughout the collection. The generated catalogs apply badges automatically. For recent additions, use the following Markdown, replacing example destinations with verified URLs:
 
 ```markdown
-[![arXiv](https://img.shields.io/badge/arXiv-red?style=flat-square)](https://arxiv.org/abs/ARXIV_ID)
-[![CVPR 2026](https://img.shields.io/badge/CVPR%202026-blue?style=flat-square)](https://example.org/paper)
-[![GitHub](https://img.shields.io/badge/GitHub-white?style=flat-square)](https://github.com/OWNER/REPOSITORY)
-[![Evidence Acquisition](https://img.shields.io/badge/Evidence%20Acquisition-purple?style=flat-square)](papers/evidence-acquisition.md)
-[![Retrieval-based](https://img.shields.io/badge/Retrieval--based-green?style=flat-square)](papers/evidence-acquisition.md#retrieval-based)
+[![arXiv 2026](https://img.shields.io/badge/arXiv-2026-red?style=flat&labelColor=555)](https://arxiv.org/abs/ARXIV_ID)
+[![CVPR 2026](https://img.shields.io/badge/CVPR-2026-blue?style=flat&labelColor=555)](https://example.org/paper)
+[![GitHub](https://img.shields.io/badge/GitHub-white?style=flat)](https://github.com/OWNER/REPOSITORY)
+[![GitHub stars](https://img.shields.io/github/stars/OWNER/REPOSITORY?style=social&label=Star)](https://github.com/OWNER/REPOSITORY)
+[![Evidence Acquisition](https://img.shields.io/badge/Evidence%20Acquisition-purple?style=flat)](papers/evidence-acquisition.md)
+[![Retrieval-based](https://img.shields.io/badge/Retrieval--based-green?style=flat)](papers/evidence-acquisition.md#retrieval-based)
 ```
 
 The relative destinations above are written from the repository root. When adding a row to `papers/recent-additions.md`, omit the `papers/` prefix. Publication colors reflect the bibliographic venue; a published paper may also have a red arXiv link. Keep text labels descriptive so readers do not have to rely on color alone.
 
-For a taxonomy entry with a verified official GitHub repository, add an optional `code_url` field to its record in `data/catalog.json`. The renderer produces a white GitHub badge. Re-importing the manuscript replaces those records, so preserve and reapply repository-only code links when synchronizing.
+For a taxonomy entry with a verified official GitHub repository, add its paper ID to [data/code-links.json](data/code-links.json), with `url` for the repository and `source` for the primary page confirming the paper-to-code match. These links survive manuscript re-imports. The renderer automatically adds a white GitHub badge and a live star-count badge. Existing inline `code_url` fields are also supported; the dedicated code-link map takes precedence.
+
+Use `style=flat` for rounded static badges and `style=social&label=Star` for GitHub stars. Publication badges use `VENUE-YEAR-COLOR` with `labelColor=555` for the venue segment. Omit stars when no verified GitHub repository is available; do not hard-code a star count.
+
+See the official [static badge](https://shields.io/badges/static-badge) and [GitHub stars](https://shields.io/badges/git-hub-repo-stars) documentation for supported options.
 
 ## Synchronize with the Manuscript
 
@@ -70,7 +75,7 @@ python3 scripts/catalog.py --import-survey /path/to/survey
 python3 scripts/catalog.py --check
 ```
 
-The survey directory must contain `sections/taxonomy.tex`, `custom.bib`, and `files/survey_teaser.png`. This replaces the imported catalog and bibliography and copies the teaser; review the diff to preserve any repository-only additions. Link overrides survive re-imports. If the taxonomy structure changes, update the stage definitions in `scripts/catalog.py` first.
+The survey directory must contain `sections/taxonomy.tex`, `custom.bib`, and `files/survey_teaser.png`. This replaces the imported catalog and bibliography and copies the teaser; review the diff to preserve any repository-only additions. Publication-link overrides and verified code links survive re-imports. If the taxonomy structure changes, update the stage definitions in `scripts/catalog.py` first.
 
 ## Corrections
 
