@@ -10,9 +10,10 @@
 [![Taxonomy](https://img.shields.io/badge/Taxonomy-4_stages_%C2%B7_16_categories-6366f1?style=flat-square)](#taxonomy)
 [![Survey](https://img.shields.io/badge/Survey-In_preparation-475569?style=flat-square)](#about-the-survey)
 [![Contributions](https://img.shields.io/badge/Contributions-Welcome-16a34a?style=flat-square)](CONTRIBUTING.md)
+[![GitHub](https://img.shields.io/badge/GitHub-white?style=flat-square)](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers)
 [![License](https://img.shields.io/badge/License-Apache_2.0-2563eb?style=flat-square)](LICENSE)
 
-**[Recent additions](#recent-additions)** · **[Explore the taxonomy](#taxonomy)** · **[Browse all papers](papers/index.md)** · **[Get BibTeX](references.bib)** · **[Suggest a paper](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers/issues/new?template=paper.yml)**
+**[Badge colors](#badge-colors)** · **[Recent additions](#recent-additions)** · **[Explore the taxonomy](#taxonomy)** · **[Browse all papers](papers/index.md)** · **[Get BibTeX](references.bib)** · **[Suggest a paper](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers/issues/new?template=paper.yml)**
 
 </div>
 
@@ -28,6 +29,18 @@ Long videos make exhaustive, high-resolution processing expensive. Video agents 
   <a href="assets/survey-teaser.png"><img src="assets/survey-teaser.png" alt="Survey teaser comparing conventional video processing, LLM-based video understanding, and an agentic loop with planning, observation, memory, verification, and multimodal evidence" width="960"></a>
   <br><sub>From passive processing to adaptive evidence seeking. Click the figure to view it at full resolution.</sub>
 </p>
+
+## Badge Colors
+
+| Badge | Meaning |
+| :--- | :--- |
+| ![arXiv](https://img.shields.io/badge/arXiv-red?style=flat-square) | `red` for arXiv papers |
+| ![Conference / Journal](https://img.shields.io/badge/Conference%20%2F%20Journal-blue?style=flat-square) | `blue` for conference/journal papers |
+| ![GitHub](https://img.shields.io/badge/GitHub-white?style=flat-square) | `white` for GitHub repositories |
+| ![Research area](https://img.shields.io/badge/Research%20area-purple?style=flat-square) | `purple` for research areas |
+| ![Category](https://img.shields.io/badge/Category-green?style=flat-square) | `green` for categories |
+
+Publication badges follow the venue recorded in the bibliography. A conference or journal paper may also have a red **arXiv** link to its preprint. Purple badges identify the broad research areas of the survey; green badges identify mechanisms within each area.
 
 ## Recent Additions
 
@@ -49,22 +62,26 @@ Choose a stage to explore its mechanisms, papers, and publication links.
 <tr>
 <td width="50%" valign="top">
 
-### 🟣 Evidence Acquisition
+### Evidence Acquisition
+
+[![Evidence Acquisition](https://img.shields.io/badge/Evidence%20Acquisition-purple?style=flat-square)](papers/evidence-acquisition.md)
 
 **Where should the agent look next?**
 
-Retrieval-based · Hierarchical · Programmatic · Learned policy
+[![Retrieval-based](https://img.shields.io/badge/Retrieval--based-green?style=flat-square)](papers/evidence-acquisition.md#retrieval-based) [![Hierarchical](https://img.shields.io/badge/Hierarchical-green?style=flat-square)](papers/evidence-acquisition.md#hierarchical) [![Programmatic](https://img.shields.io/badge/Programmatic-green?style=flat-square)](papers/evidence-acquisition.md#programmatic) [![Learned policy](https://img.shields.io/badge/Learned%20policy-green?style=flat-square)](papers/evidence-acquisition.md#learned-policy)
 
 [**Explore 33 papers →**](papers/evidence-acquisition.md)
 
 </td>
 <td width="50%" valign="top">
 
-### 🟡 Memory & State
+### Memory & State
+
+[![Memory &amp; State Representation](https://img.shields.io/badge/Memory%20%26%20State%20Representation-purple?style=flat-square)](papers/memory-state.md)
 
 **What should the agent remember?**
 
-Caption / Text · Structured · Latent / Compressed · Streaming / Online
+[![Caption / Text](https://img.shields.io/badge/Caption%20%2F%20Text-green?style=flat-square)](papers/memory-state.md#caption-text) [![Structured](https://img.shields.io/badge/Structured-green?style=flat-square)](papers/memory-state.md#structured) [![Latent / Compressed](https://img.shields.io/badge/Latent%20%2F%20Compressed-green?style=flat-square)](papers/memory-state.md#latent-compressed) [![Streaming / Online](https://img.shields.io/badge/Streaming%20%2F%20Online-green?style=flat-square)](papers/memory-state.md#streaming-online)
 
 [**Explore 32 papers →**](papers/memory-state.md)
 
@@ -73,22 +90,26 @@ Caption / Text · Structured · Latent / Compressed · Streaming / Online
 <tr>
 <td width="50%" valign="top">
 
-### 🔵 Control & Planning
+### Control & Planning
+
+[![Control &amp; Planning](https://img.shields.io/badge/Control%20%26%20Planning-purple?style=flat-square)](papers/control-planning.md)
 
 **Which action should the agent take?**
 
-Fixed workflow · Autonomous tool use · Multi-agent · Learned control
+[![Fixed workflow](https://img.shields.io/badge/Fixed%20workflow-green?style=flat-square)](papers/control-planning.md#fixed-workflow) [![Autonomous tool use](https://img.shields.io/badge/Autonomous%20tool%20use-green?style=flat-square)](papers/control-planning.md#autonomous-tool-use) [![Multi-agent](https://img.shields.io/badge/Multi--agent-green?style=flat-square)](papers/control-planning.md#multi-agent) [![Learned control](https://img.shields.io/badge/Learned%20control-green?style=flat-square)](papers/control-planning.md#learned-control)
 
 [**Explore 34 papers →**](papers/control-planning.md)
 
 </td>
 <td width="50%" valign="top">
 
-### 🟢 Verification & Aggregation
+### Verification & Aggregation
+
+[![Verification &amp; Aggregation](https://img.shields.io/badge/Verification%20%26%20Aggregation-purple?style=flat-square)](papers/verification-aggregation.md)
 
 **Is the evidence sufficient to answer?**
 
-Self-consistency · Reflection / Refine · Confidence / Calibration · Evidence alignment & Adjudication
+[![Self-consistency](https://img.shields.io/badge/Self--consistency-green?style=flat-square)](papers/verification-aggregation.md#self-consistency) [![Reflection / Refine](https://img.shields.io/badge/Reflection%20%2F%20Refine-green?style=flat-square)](papers/verification-aggregation.md#reflection-refine) [![Confidence / Calibration](https://img.shields.io/badge/Confidence%20%2F%20Calibration-green?style=flat-square)](papers/verification-aggregation.md#confidence-calibration) [![Evidence alignment &amp; Adjudication](https://img.shields.io/badge/Evidence%20alignment%20%26%20Adjudication-green?style=flat-square)](papers/verification-aggregation.md#evidence-alignment-adjudication)
 
 [**Explore 17 papers →**](papers/verification-aggregation.md)
 
@@ -122,7 +143,7 @@ The collection maps the manuscript's `sections/taxonomy.tex` to `custom.bib` usi
 | [Structured catalog](data/catalog.json) | Titles, authors, venues, citation aliases, and all category assignments |
 | [Data notes](docs/DATA_NOTES.md) | Provenance, duplicate handling, link sources, and metadata conventions |
 
-**Paper** links lead to publication or preprint pages. **BibTeX** links jump to the corresponding source record. Where a direct identifier is unavailable, **Find paper** explicitly opens a title search. Full author lists are available in the bibliography and structured catalog.
+**arXiv / Paper** badges link to publication or preprint pages. White **GitHub** badges link to verified code repositories when available. **BibTeX** links jump to the corresponding source record. Where a direct identifier is unavailable, **Find paper** explicitly opens a title search. Full author lists are available in the bibliography and structured catalog.
 
 ## Contributing
 

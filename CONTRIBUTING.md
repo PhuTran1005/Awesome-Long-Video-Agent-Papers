@@ -43,7 +43,23 @@ The repository requires **Python 3.10 or newer**, with no third-party dependenci
 
 6. Open a pull request explaining the change and its source.
 
-The four taxonomy pages and `papers/index.md` are generated; `papers/recent-additions.md` is maintained manually. Update their source data rather than editing those pages directly. Use English throughout the repository.
+The four taxonomy pages and `papers/index.md` are generated; `papers/recent-additions.md` is maintained manually. For generated pages, update the source data rather than editing the rendered pages directly. Use English throughout the repository.
+
+## Badge Style
+
+Follow the [badge colors](README.md#badge-colors) throughout the collection. The generated catalogs apply badges automatically. For recent additions, use the following Markdown, replacing example destinations with verified URLs:
+
+```markdown
+[![arXiv](https://img.shields.io/badge/arXiv-red?style=flat-square)](https://arxiv.org/abs/ARXIV_ID)
+[![CVPR 2026](https://img.shields.io/badge/CVPR%202026-blue?style=flat-square)](https://example.org/paper)
+[![GitHub](https://img.shields.io/badge/GitHub-white?style=flat-square)](https://github.com/OWNER/REPOSITORY)
+[![Evidence Acquisition](https://img.shields.io/badge/Evidence%20Acquisition-purple?style=flat-square)](papers/evidence-acquisition.md)
+[![Retrieval-based](https://img.shields.io/badge/Retrieval--based-green?style=flat-square)](papers/evidence-acquisition.md#retrieval-based)
+```
+
+The relative destinations above are written from the repository root. When adding a row to `papers/recent-additions.md`, omit the `papers/` prefix. Publication colors reflect the bibliographic venue; a published paper may also have a red arXiv link. Keep text labels descriptive so readers do not have to rely on color alone.
+
+For a taxonomy entry with a verified official GitHub repository, add an optional `code_url` field to its record in `data/catalog.json`. The renderer produces a white GitHub badge. Re-importing the manuscript replaces those records, so preserve and reapply repository-only code links when synchronizing.
 
 ## Synchronize with the Manuscript
 
