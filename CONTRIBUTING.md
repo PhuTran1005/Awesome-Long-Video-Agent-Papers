@@ -43,7 +43,7 @@ The repository requires **Python 3.10 or newer**, with no third-party dependenci
 
 6. Open a pull request explaining the change and its source.
 
-The four taxonomy pages and `papers/index.md` are generated; `papers/recent-additions.md` is maintained manually. For generated pages, update the source data rather than editing the rendered pages directly. Use English throughout the repository.
+The taxonomy tables in `README.md` (between the `taxonomy:start` / `taxonomy:end` markers) and `papers/index.md` are generated; `papers/recent-additions.md` is maintained manually. For generated pages, update the source data rather than editing the rendered pages directly. Use English throughout the repository.
 
 ## Badge Style
 
@@ -52,19 +52,29 @@ Follow the [badge colors](README.md#badge-colors) throughout the collection. The
 ```markdown
 [![arXiv 2026](https://img.shields.io/badge/arXiv-2026-red?style=flat&labelColor=555)](https://arxiv.org/abs/ARXIV_ID)
 [![CVPR 2026](https://img.shields.io/badge/CVPR-2026-blue?style=flat&labelColor=555)](https://example.org/paper)
-[![GitHub](https://img.shields.io/badge/GitHub-white?style=flat)](https://github.com/OWNER/REPOSITORY)
-[![GitHub stars](https://img.shields.io/github/stars/OWNER/REPOSITORY?style=social&label=Star)](https://github.com/OWNER/REPOSITORY)
-[![Evidence Acquisition](https://img.shields.io/badge/Evidence%20Acquisition-purple?style=flat)](papers/evidence-acquisition.md)
-[![Retrieval-based](https://img.shields.io/badge/Retrieval--based-green?style=flat)](papers/evidence-acquisition.md#retrieval-based)
+[![Code](https://img.shields.io/github/stars/OWNER/REPOSITORY?style=flat&logo=github&logoColor=white&label=Code&labelColor=24292f&color=57606a)](https://github.com/OWNER/REPOSITORY)
+[![Evidence Acquisition](https://img.shields.io/badge/Evidence%20Acquisition-c0609f?style=flat)](README.md#evidence-acquisition)
+[![Retrieval](https://img.shields.io/badge/Retrieval-c0609f?style=flat)](README.md#retrieval-based)
 ```
 
-The relative destinations above are written from the repository root. When adding a row to `papers/recent-additions.md`, omit the `papers/` prefix. Publication colors reflect the bibliographic venue; a published paper may also have a red arXiv link. Keep text labels descriptive so readers do not have to rely on color alone.
+The relative destinations above are written from the repository root. When adding a row to `papers/recent-additions.md`, prefix them with `../`. Publication colors reflect the bibliographic venue; a published paper may also have a red arXiv link. Keep text labels descriptive so readers do not have to rely on color alone.
 
-For a taxonomy entry with a verified official GitHub repository, add its paper ID to [data/code-links.json](data/code-links.json), with `url` for the repository and `source` for the primary page confirming the paper-to-code match. These links survive manuscript re-imports. The renderer automatically adds a white GitHub badge and a live star-count badge. Existing inline `code_url` fields are also supported; the dedicated code-link map takes precedence.
+For a taxonomy entry with a verified official GitHub repository, add its paper ID to [data/code-links.json](data/code-links.json), with `url` for the repository and `source` for the primary page confirming the paper-to-code match. These links survive manuscript re-imports. The renderer automatically adds the Code badge with a live star count. Existing inline `code_url` fields are also supported; the dedicated code-link map takes precedence.
 
-Use `style=flat` for rounded static badges and `style=social&label=Star` for GitHub stars. Publication badges use `VENUE-YEAR-COLOR` with `labelColor=555` for the venue segment. Omit stars when no verified GitHub repository is available; do not hard-code a star count.
+Use `style=flat` for badges; the Code badge combines a dark `Code` label with the live star count. Publication badges use `VENUE-YEAR-COLOR` with `labelColor=555` for the venue segment. Omit stars when no verified GitHub repository is available; do not hard-code a star count.
 
 See the official [static badge](https://shields.io/badges/static-badge) and [GitHub stars](https://shields.io/badges/git-hub-repo-stars) documentation for supported options.
+
+## Regenerate the Artwork
+
+The README banner and stage cards are rendered from `data/catalog.json` by `scripts/artwork.py` (requires Google Chrome or Chromium and Pillow). Rerun it after the catalog changes so the counts stay in sync:
+
+```bash
+python3 scripts/artwork.py
+python3 scripts/artwork.py --survey /path/to/survey   # teaser panel (a) and publication chart
+```
+
+`assets/taxonomy.png` is exported separately from the appendix figure of the compiled manuscript.
 
 ## Synchronize with the Manuscript
 
@@ -75,7 +85,7 @@ python3 scripts/catalog.py --import-survey /path/to/survey
 python3 scripts/catalog.py --check
 ```
 
-The survey directory must contain `sections/taxonomy.tex`, `custom.bib`, and `files/survey_teaser.png`. This replaces the imported catalog and bibliography and copies the teaser; review the diff to preserve any repository-only additions. Publication-link overrides and verified code links survive re-imports. If the taxonomy structure changes, update the stage definitions in `scripts/catalog.py` first.
+The survey directory must contain `sections/taxonomy.tex` and `custom.bib`. This replaces the imported catalog and bibliography; review the diff to preserve any repository-only additions. Publication-link overrides and verified code links survive re-imports. If the taxonomy structure changes, update the stage definitions in `scripts/catalog.py` first.
 
 ## Corrections
 

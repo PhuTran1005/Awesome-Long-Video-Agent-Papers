@@ -11,33 +11,34 @@ import sys
 import unicodedata
 from pathlib import Path
 from urllib.parse import quote, unquote, urlsplit
-import xml.etree.ElementTree as ET
+
+from theme import PALETTE, SHORT
 
 ROOT = Path(__file__).resolve().parents[1]
 STAGES = [
     ("evidence-acquisition", "Evidence Acquisition", "Where should the agent look next?", [
-        ("retrieval-based", "Retrieval-based", "Retrieve relevant moments, documents, or multimodal evidence in response to a query."),
-        ("hierarchical", "Hierarchical", "Navigate from coarse summaries to finer temporal or spatial evidence."),
-        ("programmatic", "Programmatic", "Compose executable programs that probe video content with perception tools."),
-        ("learned-policy", "Learned policy", "Learn when, where, or at what granularity to acquire the next observation."),
+        ("retrieval-based", "Retrieval-Based Acquisition", "Retrieve relevant moments, documents, or multimodal evidence in response to a query.", "sec:acq_retrieval"),
+        ("hierarchical", "Hierarchical Acquisition", "Navigate from coarse summaries to finer temporal or spatial evidence.", "sec:acq_hierarchical"),
+        ("learned-acquisition", "Learned Acquisition Policies", "Learn when, where, or at what granularity to acquire the next observation.", "sec:acq_learned"),
+        ("programmatic", "Programmatic Acquisition", "Compose executable programs that probe video content with perception tools.", "sec:acq_programmatic"),
     ]),
     ("memory-state", "Memory & State Representation", "What should the agent remember?", [
-        ("caption-text", "Caption / Text", "Retain captions, textual summaries, and language-based accounts of past observations."),
-        ("structured", "Structured", "Organize evidence as events, entities, graphs, or other explicitly addressable structures."),
-        ("latent-compressed", "Latent / Compressed", "Maintain compact representations that reduce the cost of storing and revisiting video context."),
-        ("streaming-online", "Streaming / Online", "Update memory as new observations arrive and support reasoning over an evolving stream."),
+        ("textual", "Textual Memory", "Retain captions, textual summaries, and language-based accounts of past observations.", "sec:mem_text"),
+        ("structured", "Structured Memory", "Organize evidence as events, entities, graphs, or other explicitly addressable structures.", "sec:mem_structured"),
+        ("compact", "Compact Memory Representation", "Maintain compact latent representations that reduce the cost of storing and revisiting video context.", "sec:mem_latent"),
+        ("streaming", "Streaming Memory Management", "Update memory as new observations arrive and support reasoning over an evolving stream.", "sec:mem_streaming"),
     ]),
     ("control-planning", "Control & Planning", "Which action should the agent take?", [
-        ("fixed-workflow", "Fixed workflow", "Coordinate evidence processing through a predefined sequence of stages."),
-        ("autonomous-tool-use", "Autonomous tool use", "Let a controller choose and invoke tools as the evidence and task evolve."),
-        ("multi-agent", "Multi-agent", "Distribute perception, reasoning, and coordination across collaborating agents."),
-        ("learned-control", "Learned control", "Learn action selection and planning policies for long-horizon video reasoning."),
+        ("autonomous-tool-use", "Autonomous Tool Use", "Let a controller choose and invoke tools as the evidence and task evolve.", "sec:ctl_tools"),
+        ("multi-agent", "Multi-Agent Control", "Distribute perception, reasoning, and coordination across collaborating agents.", "sec:ctl_multi"),
+        ("learned-control", "Learned Control Policies", "Learn action selection and planning policies for long-horizon video reasoning.", "sec:ctl_learned"),
+        ("fixed-workflow", "Fixed Workflows", "Coordinate evidence processing through a predefined sequence of stages.", "sec:ctl_fixed"),
     ]),
     ("verification-aggregation", "Verification & Aggregation", "Is the evidence sufficient to answer?", [
-        ("self-consistency", "Self-consistency", "Compare candidate answers or reasoning paths to assess agreement."),
-        ("reflection-refine", "Reflection / Refine", "Revisit evidence and revise an answer or plan through feedback."),
-        ("confidence-calibration", "Confidence / Calibration", "Use uncertainty estimates to guide reasoning and evidence seeking."),
-        ("evidence-alignment-adjudication", "Evidence alignment & Adjudication", "Check claims against evidence and reconcile conflicting observations or agent outputs."),
+        ("consensus", "Consensus / Self-Consistency", "Compare candidate answers or reasoning paths to assess agreement.", "sec:ver_selfcons"),
+        ("reflection", "Reflection / Refine", "Revisit evidence and revise an answer or plan through feedback.", "sec:ver_reflect"),
+        ("confidence", "Confidence / Uncertainty", "Use uncertainty estimates to guide reasoning and evidence seeking.", "sec:ver_conf"),
+        ("evidence-alignment", "Evidence Alignment & Adjudication", "Check claims against evidence and reconcile conflicting observations or agent outputs.", "sec:ver_align"),
     ]),
 ]
 
@@ -119,14 +120,21 @@ def import_survey(directory):
     bibliography = (directory / "custom.bib").read_text()
     entries = parse_bib(bibliography)
     active = re.sub(r"(?<!\\)%[^\n]*", "", taxonomy)
-    branches = [line for line in active.splitlines() if "\\citep{" in line]
-    specs = [(s, c) for s in STAGES for c in s[3]]
-    if len(branches) != len(specs):
-        raise ValueError("Taxonomy structure changed; review the 16 branch definitions before importing.")
-    papers, identities, used_keys = {}, {}, []
-    for line, (stage, category) in zip(branches, specs):
+    labels = {c[3]: (stage, c) for stage in STAGES for c in stage[3]}
+    papers, identities, used_keys, current, seen = {}, {}, [], None, set()
+    for line in active.splitlines():
+        label = re.search(r"\\ref\{(sec:(?:acq|mem|ctl|ver)_\w+)\}", line)
+        if label:
+            if label[1] not in labels:
+                raise ValueError(f"Unknown taxonomy branch {label[1]}; update STAGES in scripts/catalog.py first.")
+            current = labels[label[1]]
+            seen.add(label[1])
+        if "\\citep{" not in line:
+            continue
+        stage, category = current
         for match in re.finditer(r"(?:^|,)\s*([^,]+?)\s*\\citep\{([^}]+)\}", line):
-            name, key = plain(match[1]), match[2].strip()
+            enabling = "\\dagger" in match[1]
+            name, key = plain(re.sub(r"\$\^\{\\dagger\}\$", "", match[1])), match[2].strip()
             fields = entries[key]["fields"]
             url, kind = paper_link(fields)
             identity = url if kind == "Paper" else plain(fields["title"]).lower()
@@ -136,15 +144,18 @@ def import_survey(directory):
                     "id": canonical, "name": name, "title": plain(fields["title"]),
                     "authors": plain(fields["author"]), "year": int(fields["year"]),
                     "venue": plain(fields.get("booktitle", fields.get("journal", "Preprint"))),
-                    "url": url, "link_label": kind, "citation_keys": [], "categories": [],
+                    "url": url, "link_label": kind, "enabling": False, "citation_keys": [], "categories": [],
                 }
             paper = papers[canonical]
+            paper["enabling"] = paper["enabling"] or enabling
             if key not in paper["citation_keys"]:
                 paper["citation_keys"].append(key)
                 used_keys.append(key)
             membership = stage[0] + "/" + category[0]
             if membership not in paper["categories"]:
                 paper["categories"].append(membership)
+    if seen != set(labels):
+        raise ValueError(f"Taxonomy is missing branches: {sorted(set(labels) - seen)}")
     cited = {key.strip() for group in re.findall(r"\\citep\{([^}]+)\}", active) for key in group.split(",")}
     if cited != set(used_keys):
         raise ValueError(f"Unmapped citations: {cited.symmetric_difference(used_keys)}")
@@ -159,7 +170,6 @@ def import_survey(directory):
     (ROOT / "assets").mkdir(exist_ok=True)
     (ROOT / "data/catalog.json").write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
     (ROOT / "references.bib").write_text("% Taxonomy references; original citation keys and metadata retained.\n\n" + "\n\n".join(entries[k]["raw"] for k in used_keys) + "\n")
-    shutil.copyfile(directory / "files/survey_teaser.png", ROOT / "assets/survey-teaser.png")
 
 
 def escape(value):
@@ -189,6 +199,11 @@ def venue_label(paper):
         ("AAAI Conference", "AAAI"),
         ("USENIX Symposium", "NSDI"),
         ("MAGMaR", "MAGMaR Workshop"),
+        ("Winter Conference on Applications of Computer Vision", "WACV"),
+        ("ACM International Conference on Multimedia", "ACM MM"),
+        ("Scaling Environments for Agents", "SEA Workshop"),
+        ("LLM-based Multi-Agent Systems", "LLM-MAS Workshop"),
+        ("Agents in the Wild", "Agents in the Wild"),
         ("ACM SIGKDD", "KDD"),
     ]:
         if fragment in venue:
@@ -223,8 +238,9 @@ def github_repository(url):
 
 
 def github_stars_badge(url):
+    """One compact badge: dark `Code` label and the live star count (served by Shields.io)."""
     repo = github_repository(url)
-    image = f"![GitHub stars for {escape(repo)}](https://img.shields.io/github/stars/{repo}?style=social&label=Star)"
+    image = f"![Code, GitHub stars for {escape(repo)}](https://img.shields.io/github/stars/{repo}?style=flat&logo=github&logoColor=white&label=Code&labelColor=24292f&color=57606a)"
     return f"[{image}](https://github.com/{repo})"
 
 
@@ -235,30 +251,62 @@ def publication_badge(paper):
     return badge(venue, "lightgrey" if venue == "Preprint" else "blue", message=paper["year"])
 
 
+CATEGORY_INDEX = {s[0] + "/" + c[0]: (s, c) for s in STAGES for c in s[3]}
+ENABLING_NOTE = "<sup>†</sup>"
+
+
 def row(paper, crosslinks=False):
+    """Render one table row; the root README and papers/index.md use different relative paths."""
+    prefix = "../" if crosslinks else ""
     authors = paper["authors"].split(" and ")
     first = authors[0].split(",")
     author = " ".join(reversed(first)).strip() + (" et al." if len(authors) > 1 else "")
-    details = f'<strong>{escape(paper["name"])}</strong><br>{escape(paper["title"])}<br><sub>{escape(author)}</sub>'
+    name = escape(paper["name"]) + (ENABLING_NOTE if paper.get("enabling") else "")
+    method = f'<strong>{name}</strong><br>{publication_badge(paper)}'
     if paper["link_label"] == "Find paper":
-        links = f'[Find paper]({paper["url"]})'
-    elif urlsplit(paper["url"]).hostname == "arxiv.org":
-        links = badge("arXiv", "red", paper["url"])
+        title, links = escape(paper["title"]), [f'[Find&nbsp;paper]({paper["url"]})']
     else:
-        links = badge("Paper", "blue" if venue_label(paper) != "Preprint" else "lightgrey", paper["url"])
-    if paper.get("code_url"):
-        links += " " + badge("GitHub", "white", paper["code_url"]) + " " + github_stars_badge(paper["code_url"])
-    links += f' · [BibTeX](../references.bib#L{paper["bib_line"]})'
-    publication = publication_badge(paper)
+        title = f'<a href="{html.escape(paper["url"], quote=True)}">{escape(paper["title"])}</a>'
+        arxiv = urlsplit(paper["url"]).hostname == "arxiv.org"
+        links = [badge("arXiv", "red", paper["url"]) if arxiv else badge("Paper", "blue" if venue_label(paper) != "Preprint" else "lightgrey", paper["url"])]
+    links.append(badge("BibTeX", "lightgrey", f'{prefix}references.bib#L{paper["bib_line"]}'))
+    cell = " ".join(links) + (("<br>" + github_stars_badge(paper["code_url"])) if paper.get("code_url") else "")
+    paper_cell = f'{title}<br><sub>{escape(author)}</sub>'
     if crosslinks:
-        categories = []
-        for membership in paper["categories"]:
-            stage_id, cat_id = membership.split("/")
-            stage = next(s for s in STAGES if s[0] == stage_id)
-            cat = next(c for c in stage[3] if c[0] == cat_id)
-            categories.append(badge(cat[1], "green", f"{stage_id}.md#{cat_id}"))
-        return f'| {details} | {publication} | {"<br>".join(categories)} | {links} |'
-    return f'| {details} | {publication} | {links} |'
+        categories = [badge(CATEGORY_INDEX[m][1][1], PALETTE[m.split("/")[0]]["badge"], f"{prefix}README.md#{m.split('/')[1]}") for m in paper["categories"]]
+        return f'| {method} | {paper_cell} | {"<br>".join(categories)} | {cell} |'
+    return f'| {method} | {paper_cell} | {cell} |'
+
+
+def stage_papers(papers, stage_id):
+    return [p for p in papers if any(c.startswith(stage_id + "/") for c in p["categories"])]
+
+
+def render_taxonomy(papers):
+    """Render the complete taxonomy: stage cards, taxonomy figure, and one table per category."""
+    total_enabling = sum(bool(p.get("enabling")) for p in papers)
+    cards = "\n".join(f'  <a href="#{s[0]}"><img src="assets/card-{s[0]}.png" width="49%" alt="Stage {i}: {escape(s[1])}"></a>' for i, s in enumerate(STAGES, 1))
+    lines = ['<div align="center">', cards, "</div>", "",
+              '<p align="center">',
+              '  <a href="assets/taxonomy.png"><img src="assets/taxonomy.png" alt="Stage-centered taxonomy of long-video agents and agent-enabling methods" width="720"></a>',
+              "  <br><sub><b>The method-level taxonomy</b> from the survey appendix. Click to view at full resolution.</sub>",
+              "</p>", "",
+              f"> **Reading the tables.** Categories are *non-exclusive*: a paper appears under every branch where it makes a substantive methodological contribution. Unmarked entries are *core video agents* whose later evidence-access actions depend on earlier video-derived observations. Entries marked with <sup>†</sup> ({total_enabling} papers) are *agent-enabling methods or conceptual precursors*: they contribute useful video processing, memory, retrieval, or reflection mechanisms without independently establishing closed-loop video-evidence behavior.", ""]
+    for number, (stage_id, title, question, cats) in enumerate(STAGES, 1):
+        selected = stage_papers(papers, stage_id)
+        group_counts = {c[0]: sum(stage_id + "/" + c[0] in p["categories"] for p in papers) for c in cats}
+        chips = " ".join(badge(SHORT[c[0]], PALETTE[stage_id]["badge"], f"#{c[0]}", message=group_counts[c[0]]) for c in cats)
+        lines += [f'<a id="{stage_id}"></a>', "", f"## {title}", "",
+                  f'<img src="assets/header-{stage_id}.png" width="100%" alt="Stage {number}: {escape(question)}">', "", '<div align="center">', "", chips, "", "</div>", ""]
+        for cat_id, cat_title, description, _ in cats:
+            group = sorted([p for p in selected if stage_id + "/" + cat_id in p["categories"]], key=lambda p: (-p["year"], p["name"].casefold()))
+            count_badge = f'<img src="https://img.shields.io/badge/{len(group)}_papers-{PALETTE[stage_id]["badge"]}?style=flat" alt="{len(group)} papers">'
+            lines += [f'<a id="{cat_id}"></a>', "", "<details>",
+                      f'<summary><b>{cat_title}</b> &nbsp;{count_badge}&nbsp; <sub><i>👆 click to expand</i></sub></summary>', "",
+                      f"{description}", "", "| Method | Paper | Links |", "| :--- | :--- | :--- |"]
+            lines += [row(p) for p in group]
+            lines += ["", '<div align="right"><a href="#taxonomy">↑ Back to taxonomy</a></div>', "", "</details>", ""]
+    return "\n".join(lines)
 
 
 def render(data):
@@ -268,17 +316,8 @@ def render(data):
     entries = parse_bib(bib_source)
     for paper in papers:
         paper["bib_line"] = bib_source[:bib_source.index(entries[paper["id"]]["raw"])].count("\n") + 1
-    note = "> Venue and year follow the supplied survey bibliography. **arXiv / Paper** badges link to bibliographic identifiers or documented link overrides; **Find paper** opens a title search when no direct identifier is available. Methods can appear in multiple branches. See the [badge colors](../README.md#badge-colors).\n"
-    for stage_id, title, question, cats in STAGES:
-        selected = [p for p in papers if any(c.startswith(stage_id + "/") for c in p["categories"])]
-        lines = ["<!-- Generated by scripts/catalog.py; edit data/catalog.json and rebuild. -->", "", "[← Overview](../README.md) · [All papers](index.md) · [BibTeX](../references.bib)", '', '<a id="top"></a>', '', f"# {title}", "", badge(title, "purple", "../README.md#taxonomy"), "", f"**{question}**", "", f"{len(selected)} unique papers across {len(cats)} mechanisms. Assignments follow the survey taxonomy.", "", " ".join(badge(c[1], "green", f"#{c[0]}") for c in cats), "", note]
-        for cat_id, cat_title, description in cats:
-            group = sorted([p for p in selected if stage_id + "/" + cat_id in p["categories"]], key=lambda p: (-p["year"], p["name"].casefold()))
-            lines += [f'<a id="{cat_id}"></a>', "", f"## {cat_title}", "", description, "", f"**{len(group)} papers** · Newest bibliographic year first.", "", "| Method & paper | Year · Venue | Links |", "| :--- | :--- | :--- |"]
-            lines += [row(p) for p in group]
-            lines += ["", "[Back to top](#top)", ""]
-        output[f"papers/{stage_id}.md"] = "\n".join(lines)
-    lines = ["<!-- Generated by scripts/catalog.py; edit data/catalog.json and rebuild. -->", "", "[← Overview](../README.md) · [Recent additions](recent-additions.md) · [BibTeX](../references.bib) · [Machine-readable catalog](../data/catalog.json)", "", "# All Papers", "", "This index covers the survey taxonomy. See [Recent Additions](recent-additions.md) for methods awaiting taxonomy integration.", "", f"**{len(papers)} unique papers**, indexed by year. Use your browser's **Find** command to search a method, title, or author. The category links open the corresponding reading list.", "", note, " · ".join(f"[{y}](#year-{y})" for y in sorted({p["year"] for p in papers}, reverse=True)), ""]
+    note = "> Venue and year follow the supplied survey bibliography. **arXiv / Paper** badges link to bibliographic identifiers or documented link overrides; **Find paper** opens a title search when no direct identifier is available. Methods can appear in multiple branches; <sup>†</sup> marks agent-enabling methods. See the [badge colors](../README.md#badge-colors).\n"
+    lines = ["<!-- Generated by scripts/catalog.py; edit data/catalog.json and rebuild. -->", "", "[← Overview](../README.md) · [Taxonomy](../README.md#taxonomy) · [Recent additions](recent-additions.md) · [BibTeX](../references.bib) · [Machine-readable catalog](../data/catalog.json)", "", "# All Papers", "", "A chronological view of the survey taxonomy. For the stage-by-stage tables, see the [taxonomy in the README](../README.md#taxonomy); for methods awaiting integration, see [Recent Additions](recent-additions.md).", "", f"**{len(papers)} unique papers**, indexed by year. Use your browser's **Find** command to search a method, title, or author. The category links open the corresponding table in the README.", "", note, " · ".join(f"[{y}](#year-{y})" for y in sorted({p["year"] for p in papers}, reverse=True)), ""]
     for year in sorted({p["year"] for p in papers}, reverse=True):
         lines += [f'<a id="year-{year}"></a>', "", f"## {year}", "", "| Method & paper | Year · Venue | Taxonomy | Links |", "| :--- | :--- | :--- | :--- |"]
         lines += [row(p, True) for p in sorted(papers, key=lambda p: p["name"].casefold()) if p["year"] == year]
@@ -286,12 +325,10 @@ def render(data):
     output["papers/index.md"] = "\n".join(lines)
     readme = (ROOT / "README.md").read_text()
     keys = sum(len(p["citation_keys"]) for p in papers)
-    summary = f"**{len(papers)} unique papers · {keys} citation keys · {len(STAGES)} stages · {sum(len(s[3]) for s in STAGES)} categories**"
+    summary = f"**{len(papers)} unique papers · {len(STAGES)} stages · {sum(len(s[3]) for s in STAGES)} categories**"
     readme = re.sub(r"(?<=<!-- catalog-stats:start -->).*?(?=<!-- catalog-stats:end -->)", "\n" + summary + "\n", readme, flags=re.S)
     readme = re.sub(r"badge/Papers-\d+-", f"badge/Papers-{len(papers)}-", readme)
-    for stage_id, _, _, _ in STAGES:
-        count = sum(any(c.startswith(stage_id + "/") for c in p["categories"]) for p in papers)
-        readme = re.sub(r"\[\*\*Explore \d+ papers →\*\*\]\(papers/" + stage_id + r"\.md\)", f"[**Explore {count} papers →**](papers/{stage_id}.md)", readme)
+    readme = re.sub(r"(?<=<!-- taxonomy:start -->).*?(?=<!-- taxonomy:end -->)", lambda _: "\n" + render_taxonomy(papers) + "\n", readme, flags=re.S)
     output["README.md"] = readme
     return output
 
@@ -299,7 +336,7 @@ def render(data):
 def validate(data):
     papers = data["papers"]
     assert len({p["id"] for p in papers}) == len(papers), "Duplicate paper IDs"
-    allowed = {s[0] + "/" + c[0] for s in STAGES for c in s[3]}
+    allowed = set(CATEGORY_INDEX)
     entries = parse_bib((ROOT / "references.bib").read_text())
     keys = [key for p in papers for key in p["citation_keys"]]
     assert set(keys) == set(entries), "Catalog and bibliography keys differ"
@@ -345,14 +382,14 @@ def check_local_links():
                 assert re.fullmatch(r"L[1-9][0-9]*", anchor), link
                 assert int(anchor[1:]) <= len(target.read_text().splitlines()), link
             checked += 1
-    ET.parse(ROOT / "assets/banner.svg")
-    assert (ROOT / "assets/survey-teaser.png").read_bytes().startswith(b"\x89PNG\r\n\x1a\n")
+    for asset in ["banner.png", "survey-teaser.png", "taxonomy.png", "publication-growth.png"]:
+        assert (ROOT / "assets" / asset).read_bytes().startswith(b"\x89PNG\r\n\x1a\n"), asset
     print(f"Validated {checked} local links and the visual assets.")
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--import-survey", type=Path, help="Survey directory containing sections/taxonomy.tex, custom.bib, and files/survey_teaser.png")
+    parser.add_argument("--import-survey", type=Path, help="Survey directory containing sections/taxonomy.tex and custom.bib")
     parser.add_argument("--check", action="store_true", help="Validate metadata and check generated catalogs without writing files")
     args = parser.parse_args()
     if args.import_survey and args.check:
@@ -392,7 +429,7 @@ def main():
     if stale:
         sys.exit("Stale catalogs: " + ", ".join(stale))
     check_local_links()
-    print("Catalogs are up to date." if args.check else "Rendered five paper catalogs and refreshed README counts.")
+    print("Catalogs are up to date." if args.check else "Rendered the README taxonomy and the paper index.")
 
 
 if __name__ == "__main__":

@@ -6,9 +6,9 @@
 
 The initial collection is derived from the supplied manuscript's `sections/taxonomy.tex` and `custom.bib`. The taxonomy determines membership; the bibliography provides titles, authors, venues, and years. SHA-256 hashes in `data/catalog.json` identify the exact imported source snapshots.
 
-The source taxonomy contains **102 distinct active citation keys**. These resolve to **101 unique papers** across four stages and sixteen mechanisms. Commented-out citations are excluded. Cross-category appearances are preserved without increasing the unique-paper count.
+The source taxonomy contains **106 distinct active citation keys**. These resolve to **106 unique papers** across four stages and sixteen mechanisms. Branches are matched by their `\ref{sec:...}` labels, so reordering the taxonomy figure does not change assignments; a `$^{\dagger}$` marker flags an agent-enabling method. Commented-out citations are excluded. Cross-category appearances are preserved without increasing the unique-paper count.
 
-Only references cited by the taxonomy are included in `references.bib`; unrelated entries and template references from the source bibliography are excluded. The teaser is copied from the supplied manuscript assets.
+Only references cited by the taxonomy are included in `references.bib`; unrelated entries and template references from the source bibliography are excluded. The README figures come from the manuscript: `assets/survey-teaser.png` is panel (a) of the teaser, `assets/publication-growth.png` is the appendix publication chart (both via `scripts/artwork.py --survey`), and `assets/taxonomy.png` is the appendix taxonomy figure exported from the compiled PDF.
 
 ## Identity and Aliases
 
