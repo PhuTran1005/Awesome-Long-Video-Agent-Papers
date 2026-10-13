@@ -6,10 +6,13 @@
 
 **A curated, taxonomy-organized reading list on agentic systems for long-form video understanding.**
 
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-4a9a62?style=flat)](CONTRIBUTING.md)
+[![Stars](https://img.shields.io/github/stars/PhuTran1005/Awesome-Long-Video-Agent-Papers?style=social&label=Stars)](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers)
+
 [![Papers](https://img.shields.io/badge/Papers-106-4a82c9?style=flat)](papers/index.md)
 [![Taxonomy](https://img.shields.io/badge/Taxonomy-4_stages_%C2%B7_16_categories-6b7280?style=flat)](#taxonomy)
 [![Survey](https://img.shields.io/badge/Survey-In_preparation-b8921a?style=flat)](#about-the-survey)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-4a9a62?style=flat)](CONTRIBUTING.md)
 [![License](https://img.shields.io/badge/License-Apache_2.0-6b7280?style=flat)](LICENSE)
 
 [**Taxonomy**](#taxonomy) &nbsp;·&nbsp; [**All papers by year**](papers/index.md) &nbsp;·&nbsp; [**Recent additions**](papers/recent-additions.md) &nbsp;·&nbsp; [**BibTeX**](references.bib) &nbsp;·&nbsp; [**Suggest a paper**](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers/issues/new?template=paper.yml)
