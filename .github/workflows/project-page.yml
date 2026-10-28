@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: read
+  pages: read
 
 concurrency:
   group: project-page-${{ github.ref }}

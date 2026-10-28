@@ -57,14 +57,17 @@ The builder checks catalog/bibliography coverage, paper IDs, categories, HTTPS p
 
 The [Project page workflow](../.github/workflows/project-page.yml) builds and deploys pushes to `project-page`. Pull requests run checks and package the site without deployment. The workflow publishes only the packaged website, not the whole repository.
 
-When ready to publish:
+The project page is hosted at **[phutran1005.github.io/Awesome-Long-Video-Agent-Papers/](https://phutran1005.github.io/Awesome-Long-Video-Agent-Papers/)**, alongside the [personal homepage](https://phutran1005.github.io/).
 
-1. Push `project-page` to the repository.
-2. In **Settings → Pages → Build and deployment**, choose **GitHub Actions**.
-3. If the `github-pages` environment restricts deployment branches, allow `project-page`.
-4. Run the **Project page** workflow on `project-page`, or push another commit.
+Repository Pages uses **GitHub Actions**. The `github-pages` environment allows deployment from `project-page`. After changing the site, rebuild and commit the generated HTML, then push the branch:
 
-The expected URL for this repository is `https://phutran1005.github.io/Awesome-Long-Video-Agent-Papers/`. This is a deployment target, not a claim that the site is already live. GitHub's [custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) describes the repository setup.
+```bash
+python -X utf8 scripts/build_project_page.py
+python -X utf8 scripts/build_project_page.py --check
+git push origin project-page
+```
+
+Follow the deployment in [GitHub Actions](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers/actions). The workflow runs automatically on pushes; the default `main` branch remains the paper collection. GitHub's [custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) describes the hosting configuration.
 
 For another static host:
 
