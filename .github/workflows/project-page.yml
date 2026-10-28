@@ -1,0 +1,59 @@
+name: Project page
+
+on:
+  push:
+    branches: [project-page]
+  pull_request:
+    paths:
+      - 'project-page/**'
+      - 'scripts/build_project_page.py'
+      - 'data/**'
+      - 'references.bib'
+      - 'index.html'
+      - '.github/workflows/project-page.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: project-page-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check catalog and generated project page
+        run: |
+          python -X utf8 scripts/catalog.py --check
+          python -X utf8 scripts/build_project_page.py --check
+      - name: Package static website
+        run: python -X utf8 scripts/build_project_page.py --output dist
+      - name: Configure Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/project-page'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy project page
+        id: deployment
+        uses: actions/deploy-pages@v4
