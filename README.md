@@ -8,7 +8,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-4a9a62?style=flat)](CONTRIBUTING.md)
-[![Stars](https://img.shields.io/github/stars/PhuTran1005/Awesome-Long-Video-Agent-Papers?style=social&label=Stars)](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers)
+[![Stars](https://img.shields.io/github/stars/PhuTran1005/Awesome-Long-Video-Agent-Papers?style=social&label=Stars)](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers) [![Project Page](https://img.shields.io/badge/Project_Page-Online-4a82c9?style=flat&logo=githubpages&logoColor=white)](https://phutran1005.github.io/Awesome-Long-Video-Agent-Papers/) [![Visitors](https://visitor-badge.laobi.icu/badge?page_id=PhuTran1005.Awesome-Long-Video-Agent-Papers&left_color=%23555&right_color=%234a82c9&left_text=Visitors)](https://github.com/PhuTran1005/Awesome-Long-Video-Agent-Papers)
 
 [![Papers](https://img.shields.io/badge/Papers-106-4a82c9?style=flat)](papers/index.md)
 [![Taxonomy](https://img.shields.io/badge/Taxonomy-4_stages_%C2%B7_16_categories-6b7280?style=flat)](#taxonomy)
